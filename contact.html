@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Sukriti Global Education Consultancy</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: sans-serif;
+      overflow-x: hidden
+    }
+
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #003F78;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease
+    }
+
+    .preloader-ring {
+      width: 80px;
+      height: 80px;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-top-color: #CC0000;
+      border-right-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite
+    }
+
+    .preloader-logo {
+      position: absolute;
+      font-family: sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      color: #fff
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* video always visible — no fade-in delay */
+    #page-hero video.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:1!important;transition:none!important;}
+    /* remove ALL effects and overlays */
+    #page-hero::before, #page-hero::after { display:none !important; }
+    #page-hero canvas, #page-hero .u3d-orb, #page-hero .orb-wrap { display:none !important; }
+    #page-hero .hero-video-overlay { display:none !important; }
+    #page-hero video.hero-video { filter:none!important; }
+    .page-hero .page-hero-content{position:relative;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,0.8)}
+    /* use the standard gradient from style.css */
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+
+<body>
+  <div id="preloader"
+    style="position:fixed;inset:0;background:linear-gradient(135deg, #003F78, #007BB2, #00BFFF);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity 0.6s,visibility 0.6s">
+    <div class="preloader-inner">
+      <div class="preloader-ring"></div>
+      <div class="preloader-logo"><img src="Sukriti Logo.png" alt="SG" style="width:100%;height:100%;object-fit:contain"
+          onerror="this.outerHTML='SG'"></div>
+    </div>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", function () { var p = document.getElementById("preloader"); if (p) { p.style.transition = "opacity 0.4s"; p.style.opacity = "0"; setTimeout(function () { p.style.display = "none"; }, 400); } });</script>
+  <header id="main-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-wrap"><img src="Sukriti Logo.png" alt="Logo" class="logo-img"
+            onerror="this.style.display='none';document.getElementById('logofb').style.display='flex'">
+          <div class="logo-fb" id="logofb" style="display:none">SG</div>
+        </div>
+        <div class="logo-text-block"><span class="logo-title">Sukriti Global</span><span class="logo-subtitle">Education
+            Consultancy</span></div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="has-dropdown"><a href="#" class="nav-link">Study Abroad <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="currentColor" style="vertical-align:middle">
+              <path d="M7 10l5 5 5-5z" />
+            </svg></a>
+          <ul class="dropdown">
+            <li><a href="study-australia.html">Australia</a></li>
+            <li><a href="study-usa.html">USA</a></li>
+            <li><a href="study-uk.html">UK</a></li>
+            <li><a href="study-japan.html">Japan</a></li>
+            <li><a href="study-newzealand.html">New Zealand</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="#" class="nav-link">Student Services <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="currentColor" style="vertical-align:middle">
+              <path d="M7 10l5 5 5-5z" />
+            </svg></a>
+          <ul class="dropdown">
+            <li><a href="services/visa-application.html">Visa Application</a></li>
+            <li><a href="services/pte-preparation.html">PTE Test Preparation</a></li>
+            <li><a href="services/ielts-training.html">IELTS Training</a></li>
+            <li><a href="services/japanese-language.html">Japanese Language</a></li>
+            <li><a href="services/jlpt.html">JLPT Preparation</a></li>
+            <li><a href="services/ssw-preparation.html">SSW Preparation</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions">
+
+
+        <a href="contact.html" class="btn-consult">Free Counselling</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero" id="page-hero">
+    <div class="hero-video-overlay"></div>
+    <div class="page-hero-content">
+      <h1 class="anim-fadeup">Contact Us</h1>
+      <div class="breadcrumb anim-fadeup"><a href="index.html">Home</a> <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+        </svg> <span>Contact
+          Us</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-card cin-card">
+          <h3>Get in Touch</h3>
+          <p style="opacity:0.7;margin-bottom:30px;line-height:1.7">We're here to help you begin your study abroad
+            journey. Reach out to us and our expert counselors will guide you.</p>
+          <div class="ci-item">
+            <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg></div>
+            <div class="ci-text">
+              <h5>Our Office</h5>
+              <p>Gongabu Chowk, Infinity Movies Building<br>Kathmandu, Nepal</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg></div>
+            <div class="ci-text">
+              <h5>Phone</h5>
+              <p>01-4978006</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+              </svg></div>
+            <div class="ci-text">
+              <h5>WhatsApp</h5>
+              <p>9851159978</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+              </svg></div>
+            <div class="ci-text">
+              <h5>Email</h5>
+              <p>info.sukritiglobal@gmail.com</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+              </svg></div>
+            <div class="ci-text">
+              <h5>Opening Time</h5>
+              <p>Sun – Fri: 6:00 AM – 6:00 PM<br></p>
+            </div>
+          </div>
+          <div style="margin-top:28px">
+            <p
+              style="font-family:Montserrat;font-weight:700;font-size:14px;margin-bottom:14px;color:rgba(255,255,255,0.9)">
+              Follow Us</p>
+            <div class="f-socials">
+              <a href="https://www.facebook.com/profile.php?id=61583860509761&sk=reels_tab" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                </svg></a>
+              <a href="https://www.instagram.com/sukritiglobal/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></a>
+              <a href="https://www.tiktok.com/@sukritiglobal" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                  width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                </svg></a>
+              <a href="https://wa.me/9779851159978" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-card cfc-card">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Your Full Name *" required>
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email Address *" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="tel" placeholder="Phone Number">
+              </div>
+              <div class="form-group">
+                <select>
+                  <option value="">Preferred Country</option>
+                  <option>Australia</option>
+                  <option>USA</option>
+                  <option>UK</option>
+                  <option>Japan</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <select>
+                <option value="">Service You're Interested In</option>
+                <option>Study Abroad Counselling</option>
+                <option>Visa Application</option>
+                <option>IELTS Training</option>
+                <option>PTE Test Preparation</option>
+                <option>Japanese Language</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message *" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                style="vertical-align:middle">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+              </svg> Send Message
+            </button>
+          </form>
+          <div style="margin-top:20px;text-align:center;padding:18px 20px;background:#f8f9ff;border-radius:12px;border:1px dashed #ccd4f0">
+            <p style="font-size:13px;color:#666;margin-bottom:10px">Prefer filling out a form? Use our Google Form instead.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuME3wPrJgZmY_T1xgV8X2p2oPASTBW76lXxh_VSLxIUjz1w/viewform?usp=dialog"
+              target="_blank" rel="noopener"
+              style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--red);color:var(--red);font-family:Poppins,sans-serif;font-weight:600;font-size:14px;padding:10px 24px;border-radius:50px;text-decoration:none;transition:background .25s,color .25s"
+              onmouseover="this.style.background='var(--red)';this.style.color='#fff'"
+              onmouseout="this.style.background='#fff';this.style.color='var(--red)'">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+              Fill Google Form
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="f-brand">
+            <div class="footer-logo">
+              <div class="logo-wrap">
+                <img src="images/logo.png" alt="Sukriti Global" class="logo-img" style="width:100%;height:100%;object-fit:contain">
+              </div>
+              <div class="logo-text-block"><span class="logo-title">Sukriti Global</span><span
+                  class="logo-subtitle">Education Consultancy</span></div>
+            </div>
+            <p>Your trusted partner for study abroad consulting in Nepal.</p>
+            <div class="f-socials"><a href="https://www.facebook.com/profile.php?id=61583860509761&sk=reels_tab" target="_blank"><svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" fill="currentColor"
+                  style="vertical-align:middle">
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                </svg></a><a href="https://www.instagram.com/sukritiglobal/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></a><a href="https://www.tiktok.com/@sukritiglobal" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                </svg></a><a href="https://wa.me/9779851159978" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                </svg></a></div>
+          </div>
+          <div class="f-col">
+            <h4>Student Services</h4>
+            <ul>
+              <li><a href="services/visa-application.html">Visa Application</a></li>
+              <li><a href="services/pte-preparation.html">PTE Test Preparation</a></li>
+              <li><a href="services/ielts-training.html">IELTS Training</a></li>
+              <li><a href="services/japanese-language.html">Japanese Language</a></li>
+              <li><a href="services/jlpt.html">JLPT Preparation</a></li>
+                <li><a href="services/ssw-preparation.html">SSW Preparation</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Study Abroad</h4>
+            <ul>
+              <li><a href="study-australia.html">Australia</a></li>
+              <li><a href="study-usa.html">USA</a></li>
+              <li><a href="study-uk.html">UK</a></li>
+              <li><a href="study-japan.html">Japan</a></li>
+            <li><a href="study-newzealand.html">New Zealand</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Contact Us</h4>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg><span>Gongabu Chowk, Infinity Movies Building,
+                Kathmandu</span></div>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg><span>01-4978006</span></div>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+              </svg><span>info.sukritiglobal@gmail.com</span>
+            </div>
+            <div style="margin-top:14px;border-radius:10px;overflow:hidden">
+              <iframe
+                src="https://maps.google.com/maps?q=Infinity+Movies+Building+Gongabu+Chowk+Kathmandu+Nepal&output=embed&z=17"
+                width="100%" height="140" style="border:0;display:block" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Sukriti Global Education Consultancy. All Rights Reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+  <button class="back-top" id="back-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+      height="1em" fill="currentColor" style="vertical-align:middle">
+      <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" />
+    </svg></button>
+  <a href="https://wa.me/9779851159978?text=Hello%20Sukriti%20Global!" target="_blank" class="whatsapp-float"><svg
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor"
+      style="vertical-align:middle">
+      <path
+        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+    </svg></a>
+  <script src="js/main.js" defer></script>
+
+  <style>
+    /* ── Contact card 3D slide-in from left ── */
+    .cin-card {
+      opacity: 0;
+      transform: perspective(1000px) translateX(-200px) rotateY(40deg) rotateX(8deg) scale(0.75);
+      filter: blur(8px);
+      transition: none;
+    }
+
+    @keyframes cinSlide {
+      0%   { opacity:0; transform:perspective(1000px) translateX(-200px) rotateY(40deg) rotateX(8deg) scale(0.75); filter:blur(8px); }
+      55%  { opacity:1; transform:perspective(1000px) translateX(16px) rotateY(-6deg) rotateX(-2deg) scale(1.03); filter:blur(0); }
+      75%  { transform:perspective(1000px) translateX(-8px) rotateY(3deg) rotateX(1deg) scale(0.98); }
+      90%  { transform:perspective(1000px) translateX(4px) rotateY(-1deg) scale(1.005); }
+      100% { opacity:1; transform:perspective(1000px) translateX(0) rotateY(0) rotateX(0) scale(1); filter:blur(0); }
+    }
+
+    @keyframes cinGlow {
+      0%   { box-shadow: 0 0 0 0 rgba(0,150,255,0.6); }
+      50%  { box-shadow: 0 0 40px 10px rgba(0,150,255,0.3); }
+      100% { box-shadow: 0 20px 60px rgba(0,60,140,0.3); }
+    }
+
+    @keyframes cinHeading {
+      0%   { opacity:0; transform:translateX(-60px) skewX(-12deg); letter-spacing:-2px; }
+      60%  { opacity:1; transform:translateX(6px) skewX(2deg); letter-spacing:0; }
+      100% { opacity:1; transform:translateX(0) skewX(0); }
+    }
+
+    @keyframes cinItem {
+      0%   { opacity:0; transform:translateX(-70px) rotateY(20deg) scale(0.9); }
+      60%  { opacity:1; transform:translateX(8px) rotateY(-3deg) scale(1.02); }
+      100% { opacity:1; transform:translateX(0) rotateY(0) scale(1); }
+    }
+
+    @keyframes cinIcon {
+      0%   { opacity:0; transform:scale(0) rotateY(-180deg); }
+      60%  { transform:scale(1.25) rotateY(10deg); opacity:1; }
+      100% { transform:scale(1) rotateY(0); opacity:1; }
+    }
+
+    @keyframes cinSocials {
+      0%   { opacity:0; transform:translateY(20px) scale(0.85); }
+      100% { opacity:1; transform:translateY(0) scale(1); }
+    }
+
+    @keyframes cinShimmer {
+      0%   { left:-100%; }
+      100% { left:200%; }
+    }
+
+    .cin-card.cin-go {
+      animation: cinSlide 1.1s cubic-bezier(0.22,1,0.36,1) forwards,
+                 cinGlow 1.4s ease 0.6s forwards;
+    }
+
+    .cin-card.cin-go h3 {
+      animation: cinHeading 0.8s cubic-bezier(0.22,1,0.36,1) 0.25s both;
+    }
+
+    .cin-card.cin-go > p {
+      opacity: 0;
+      animation: cinItem 0.6s cubic-bezier(0.22,1,0.36,1) 0.4s forwards;
+    }
+
+    .cin-card.cin-go .ci-item          { opacity:0; animation: cinItem 0.6s cubic-bezier(0.22,1,0.36,1) forwards; }
+    .cin-card.cin-go .ci-item:nth-child(3)  { animation-delay: 0.55s; }
+    .cin-card.cin-go .ci-item:nth-child(4)  { animation-delay: 0.70s; }
+    .cin-card.cin-go .ci-item:nth-child(5)  { animation-delay: 0.85s; }
+    .cin-card.cin-go .ci-item:nth-child(6)  { animation-delay: 1.00s; }
+    .cin-card.cin-go .ci-item:nth-child(7)  { animation-delay: 1.15s; }
+
+    .cin-card.cin-go .ci-icon {
+      animation: cinIcon 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards;
+      animation-delay: inherit;
+    }
+
+    .cin-card.cin-go .f-socials {
+      opacity:0;
+      animation: cinSocials 0.7s cubic-bezier(0.22,1,0.36,1) 1.35s forwards;
+    }
+
+    /* ── Form card 3D slide-in from right ── */
+    .cfc-card {
+      opacity: 0;
+      transform: perspective(1000px) translateX(200px) rotateY(-40deg) rotateX(8deg) scale(0.75);
+      filter: blur(8px);
+      transition: none;
+    }
+
+    @keyframes cfcSlide {
+      0%   { opacity:0; transform:perspective(1000px) translateX(200px) rotateY(-40deg) rotateX(8deg) scale(0.75); filter:blur(8px); }
+      55%  { opacity:1; transform:perspective(1000px) translateX(-16px) rotateY(6deg) rotateX(-2deg) scale(1.03); filter:blur(0); }
+      75%  { transform:perspective(1000px) translateX(8px) rotateY(-3deg) rotateX(1deg) scale(0.98); }
+      90%  { transform:perspective(1000px) translateX(-4px) rotateY(1deg) scale(1.005); }
+      100% { opacity:1; transform:perspective(1000px) translateX(0) rotateY(0) rotateX(0) scale(1); filter:blur(0); }
+    }
+
+    @keyframes cfcGlow {
+      0%   { box-shadow: 0 0 0 0 rgba(0,150,255,0.4); }
+      50%  { box-shadow: 0 0 40px 10px rgba(0,150,255,0.15); }
+      100% { box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+    }
+
+    @keyframes cfcHeading {
+      0%   { opacity:0; transform:translateX(60px) skewX(12deg); }
+      60%  { opacity:1; transform:translateX(-6px) skewX(-2deg); }
+      100% { opacity:1; transform:translateX(0) skewX(0); }
+    }
+
+    @keyframes cfcField {
+      0%   { opacity:0; transform:translateX(60px) rotateY(-15deg) scale(0.93); }
+      60%  { opacity:1; transform:translateX(-6px) rotateY(2deg) scale(1.01); }
+      100% { opacity:1; transform:translateX(0) rotateY(0) scale(1); }
+    }
+
+    .cfc-card.cfc-go {
+      animation: cfcSlide 1.1s cubic-bezier(0.22,1,0.36,1) forwards,
+                 cfcGlow 1.4s ease 0.6s forwards;
+    }
+
+    .cfc-card.cfc-go h3 {
+      animation: cfcHeading 0.8s cubic-bezier(0.22,1,0.36,1) 0.25s both;
+    }
+
+    .cfc-card.cfc-go .form-row:nth-child(1) { opacity:0; animation: cfcField 0.55s cubic-bezier(0.22,1,0.36,1) 0.45s forwards; }
+    .cfc-card.cfc-go .form-row:nth-child(2) { opacity:0; animation: cfcField 0.55s cubic-bezier(0.22,1,0.36,1) 0.60s forwards; }
+    .cfc-card.cfc-go .form-group:nth-of-type(3) { opacity:0; animation: cfcField 0.55s cubic-bezier(0.22,1,0.36,1) 0.75s forwards; }
+    .cfc-card.cfc-go .form-group:nth-of-type(4) { opacity:0; animation: cfcField 0.55s cubic-bezier(0.22,1,0.36,1) 0.90s forwards; }
+    .cfc-card.cfc-go button[type="submit"]       { opacity:0; animation: cfcField 0.6s cubic-bezier(0.34,1.56,0.64,1) 1.05s forwards; }
+    .cfc-card.cfc-go .map-embed                  { opacity:0; animation: cfcField 0.6s cubic-bezier(0.22,1,0.36,1) 1.20s forwards; }
+
+    /* shimmer sweep after arrival */
+    .cfc-card.cfc-go::after {
+      content:'';
+      position:absolute;
+      top:0; left:-100%;
+      width:60%; height:100%;
+      background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,0.22) 50%,transparent 70%);
+      animation: cinShimmer 0.9s ease 1.1s forwards;
+      pointer-events:none;
+    }
+
+    /* shimmer sweep after arrival */
+    .cin-card.cin-go::after {
+      content:'';
+      position:absolute;
+      top:0; left:-100%;
+      width:60%; height:100%;
+      background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,0.18) 50%,transparent 70%);
+      animation: cinShimmer 0.9s ease 1.1s forwards;
+      pointer-events:none;
+    }
+  </style>
+
+  <script>
+    (function() {
+      /* ── Left card (Get in Touch) ── */
+      var card = document.querySelector('.cin-card');
+      var formCard = document.querySelector('.cfc-card');
+
+      function fireCard(el, cls) {
+        if (!el || el._fired) return;
+        el._fired = true;
+        el.classList.add(cls);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (!e.isIntersecting) return;
+            if (e.target === card)     fireCard(card,     'cin-go');
+            if (e.target === formCard) fireCard(formCard, 'cfc-go');
+          });
+        }, { threshold: 0.1 });
+        if (card)     io.observe(card);
+        if (formCard) io.observe(formCard);
+      } else {
+        window.addEventListener('load', function() {
+          fireCard(card,     'cin-go');
+          fireCard(formCard, 'cfc-go');
+        });
+      }
+    })();
+  </script>
+  <script>
+    (function(){
+      var video = document.getElementById('heroVideo');
+      if(!video) return;
+      video.addEventListener('canplay', function(){ video.classList.add('loaded'); });
+      if('IntersectionObserver' in window){
+        var vObs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if(e.isIntersecting){ video.play().catch(function(){}); } else { video.pause(); }
+          });
+        },{threshold:0.1});
+        vObs.observe(document.getElementById('page-hero'));
+      } else {
+        video.play().catch(function(){});
+      }
+    })();
+  </script>
+</body>
+
+</html>

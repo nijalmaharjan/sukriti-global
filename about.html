@@ -1,0 +1,736 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Sukriti Global Education Consultancy</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #003F78;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+    }
+
+    .preloader-ring {
+      width: 80px;
+      height: 80px;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-top-color: #cc0000;
+      border-right-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .preloader-logo {
+      position: absolute;
+      font-family: sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      color: #fff;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css" />
+    <style>
+    #page-hero { background: linear-gradient(135deg, #003F78 0%, #007bb2 55%, #00bfff 100%) !important; animation: none !important; }
+    .page-hero .page-hero-content { position: relative; z-index: 2; }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" media="print" onload="this.media = 'all'" />
+</head>
+
+<body>
+  <div id="preloader" style="
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(135deg, #003F78, #007bb2, #00bfff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition:
+          opacity 0.6s,
+          visibility 0.6s;
+      ">
+    <div class="preloader-inner">
+      <div class="preloader-ring"></div>
+      <div class="preloader-logo">
+        <img src="Sukriti Logo.png" alt="SG" style="width: 100%; height: 100%; object-fit: contain"
+          onerror="this.outerHTML = 'SG'" />
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var p = document.getElementById("preloader");
+      if (p) {
+        p.style.transition = "opacity 0.4s";
+        p.style.opacity = "0";
+        setTimeout(function () {
+          p.style.display = "none";
+        }, 400);
+      }
+    });
+  </script>
+  <header id="main-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-wrap">
+          <img src="Sukriti Logo.png" alt="Logo" class="logo-img" onerror="
+                this.style.display = 'none';
+                document.getElementById('logofb').style.display = 'flex';
+              " />
+          <div class="logo-fb" id="logofb" style="display: none">SG</div>
+        </div>
+        <div class="logo-text-block">
+          <span class="logo-title">Sukriti Global</span><span class="logo-subtitle">Education Consultancy</span>
+        </div>
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li class="has-dropdown">
+          <a href="#" class="nav-link">Study Abroad <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              width="0.75em" height="0.75em" fill="currentColor" style="vertical-align:middle">
+              <path d="M7 10l5 5 5-5z" />
+            </svg></a>
+          <ul class="dropdown">
+            <li><a href="study-australia.html">Australia</a></li>
+            <li><a href="study-usa.html">USA</a></li>
+            <li><a href="study-uk.html">UK</a></li>
+            <li><a href="study-japan.html">Japan</a></li>
+            <li><a href="study-newzealand.html">New Zealand</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#" class="nav-link">Student Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              width="0.75em" height="0.75em" fill="currentColor" style="vertical-align:middle">
+              <path d="M7 10l5 5 5-5z" />
+            </svg></a>
+          <ul class="dropdown">
+            <li>
+              <a href="services/visa-application.html">Visa Application</a>
+            </li>
+            <li>
+              <a href="services/pte-preparation.html">PTE Test Preparation</a>
+            </li>
+            <li><a href="services/ielts-training.html">IELTS Training</a></li>
+            <li>
+              <a href="services/japanese-language.html">Japanese Language</a>
+            </li>
+            <li>
+              <a href="services/ssw-preparation.html">SSW Preparation</a>
+            </li>
+            <li><a href="services/jlpt.html">JLPT Preparation</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions">
+
+
+        <a href="contact.html" class="btn-consult">Free Counselling</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero" id="page-hero">
+    <div class="page-hero-content">
+      <h1 class="anim-fadeup">About Us</h1>
+      <div class="breadcrumb anim-fadeup">
+        <a href="index.html">Home</a> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+          height="1em" fill="currentColor" style="vertical-align:middle">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+        </svg>
+        <span>About Us</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-intro" style="background: #fff">
+    <div class="container">
+      <div class="two-col">
+        <div class="col-img reveal-left">
+          <img src="Sukriti Logo.png" alt="About Sukriti" onerror="
+                this.onerror = null;
+                this.src =
+                  'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=450&fit=crop';
+              " />
+        </div>
+        <div class="col-content reveal-right">
+          <div class="tag-label">Our Story</div>
+          <h2>
+            Nepal's Premier <span class="red">Education Consultancy</span>
+          </h2>
+          <p>
+            Sukriti Global Education Consultancy Pvt. Ltd., is a professionally managed and purpose-driven educational consultancy committed to delivering high-quality Japanese language education, cultural training, and career guidance for students and professionals aspiring to study and work in Japan.
+          </p>
+          <p>
+            Located in Kathmandu, Nepal, our institution provides comprehensive Japanese language programs, cultural orientation, and professional support services designed to prepare individuals for successful academic and professional futures in Japan. We are dedicated to developing not only language proficiency but also the practical communication skills, discipline, confidence, and cultural understanding necessary to thrive in Japanese educational institutions and professional environments.
+          </p>
+          <p>
+            With a strong focus on quality education and personalized student support, we offer JLPT and JFT preparation classes, student visa counseling, Specified Skilled Worker (SSW) preparation, interview training, and complete documentation assistance. Our experienced instructors and counseling team work closely with each student to provide proper guidance and continuous support throughout every stage of their journey.
+          </p>
+          <p>
+            At Sukriti Global Education Consultancy Pvt. Ltd., we believe in professionalism, transparency, integrity, and long-term student success. Our mission is to build a strong bridge between Nepal and Japan by empowering individuals with the knowledge, skills, and confidence required to achieve their educational and career goals internationally.
+          </p>
+          <div style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                margin-top: 28px;
+              ">
+            <div style="
+                  text-align: center;
+                  padding: 20px;
+                  background: var(--gray);
+                  border-radius: 12px;
+                ">
+              <div style="
+                    font-family: Montserrat;
+                    font-weight: 900;
+                    font-size: 32px;
+                    color: var(--red);
+                  ">
+                100+
+              </div>
+              <div style="font-size: 13px; color: var(--gray-dark)">
+                Students Assisted
+              </div>
+            </div>
+            <div style="
+                  text-align: center;
+                  padding: 20px;
+                  background: var(--gray);
+                  border-radius: 12px;
+                ">
+              <div style="
+                    font-family: Montserrat;
+                    font-weight: 900;
+                    font-size: 32px;
+                    color: var(--blue);
+                  ">
+                98%
+              </div>
+              <div style="font-size: 13px; color: var(--gray-dark)">
+                Visa Success Rate
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--gray)">
+    <div class="container">
+      <div class="sec-header" style="align-items:flex-start; text-align:left">
+        <div class="tag-label">Our Mission & Vision</div>
+        <h2>Why We Do <span class="red">What We Do</span></h2>
+      </div>
+
+      <!-- 2-column: Mission left | Vision + Services right -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;">
+
+        <!-- LEFT: Our Mission -->
+        <div style="background:#fff;border-radius:20px;padding:36px 32px;box-shadow:var(--shadow);border-top:4px solid var(--blue);height:100%;" class="reveal-card">
+          <h3 style="font-family:Montserrat;font-weight:800;font-size:22px;color:var(--blue);margin-bottom:16px;">Our Mission</h3>
+          <ul style="list-style:none;padding:0;margin:0 0 20px 0;display:flex;flex-direction:column;gap:11px;">
+            <li style="display:flex;align-items:flex-start;gap:10px;color:var(--gray-dark);line-height:1.7;font-size:13.5px;">
+              <span style="width:7px;height:7px;background:var(--blue);border-radius:50%;flex-shrink:0;margin-top:7px;"></span>
+              Provide high-quality Japanese language education with practical and professional training
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;color:var(--gray-dark);line-height:1.7;font-size:13.5px;">
+              <span style="width:7px;height:7px;background:var(--blue);border-radius:50%;flex-shrink:0;margin-top:7px;"></span>
+              Support students with genuine study and career opportunities in Japan and other countries
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;color:var(--gray-dark);line-height:1.7;font-size:13.5px;">
+              <span style="width:7px;height:7px;background:var(--blue);border-radius:50%;flex-shrink:0;margin-top:7px;"></span>
+              Prepare skilled candidates for Japan's SSW program and global industries
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;color:var(--gray-dark);line-height:1.7;font-size:13.5px;">
+              <span style="width:7px;height:7px;background:var(--blue);border-radius:50%;flex-shrink:0;margin-top:7px;"></span>
+              Promote cultural understanding and build strong Nepal–Japan international relationships
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;color:var(--gray-dark);line-height:1.7;font-size:13.5px;">
+              <span style="width:7px;height:7px;background:var(--blue);border-radius:50%;flex-shrink:0;margin-top:7px;"></span>
+              Provide honest counseling, reliable guidance, and student-focused support
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;color:var(--gray-dark);line-height:1.7;font-size:13.5px;">
+              <span style="width:7px;height:7px;background:var(--blue);border-radius:50%;flex-shrink:0;margin-top:7px;"></span>
+              Help students and professionals achieve long-term academic and career success internationally
+            </li>
+          </ul>
+          <div style="border-top:1px solid #e8ecf4;padding-top:20px;display:flex;flex-direction:column;gap:14px;">
+            <p style="color:var(--gray-dark);line-height:1.85;font-size:13.5px;margin:0;">Our mission at Sukriti Global Education Consultancy Pvt. Ltd. is to become one of Nepal's most trusted and leading institutions for Japanese language education, study abroad guidance, and international career development, with a strong focus on Japan and the Specified Skilled Worker (SSW) program. We are committed to empowering students and professionals with the knowledge, skills, and confidence needed to achieve academic and career success on a global level.</p>
+            <p style="color:var(--gray-dark);line-height:1.85;font-size:13.5px;margin:0;">Alongside Japan-focused opportunities, we aim to provide reliable and professional guidance for students aspiring to pursue higher education in top international destinations such as Australia, United States, New Zealand, and leading European countries including United Kingdom, Germany, and Norway. Through quality counseling, ethical practices, language preparation, and personalized support, we strive to open doors to world-class education and international career opportunities for Nepalese students.</p>
+            <p style="color:var(--gray-dark);line-height:1.85;font-size:13.5px;margin:0;">Our mission is not only to guide students abroad but also to help them build brighter futures, develop global perspectives, and become skilled, confident, and successful global citizens capable of competing in the international arena.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Vision + Services stacked -->
+        <div style="display:flex;flex-direction:column;gap:28px;">
+
+          <!-- Our Vision -->
+          <div style="background:#fff;border-radius:20px;padding:36px 32px;box-shadow:var(--shadow);border-top:4px solid var(--red);" class="reveal-card">
+            <h3 style="font-family:Montserrat;font-weight:800;font-size:22px;color:var(--red);margin-bottom:16px;">Our Vision</h3>
+            <p style="color:var(--gray-dark);line-height:1.85;font-size:14.5px;margin:0;">
+              To become one of Nepal's most trusted institutions for Japanese language education, study abroad guidance, and international career development, with a strong focus on Japan and the Specified Skilled Worker (SSW) program.
+            </p>
+            <p style="color:var(--gray-dark);line-height:1.85;font-size:14.5px;margin:14px 0 0;">
+              We also offer well-structured IELTS and PTE classes designed to help students improve their English proficiency and achieve the required scores for studying and working abroad.
+            </p>
+          </div>
+
+          <!-- Our Services -->
+          <div style="background:#fff;border-radius:20px;padding:36px 32px;box-shadow:var(--shadow);border-top:4px solid #27ae60;" class="reveal-card">
+            <h3 style="font-family:Montserrat;font-weight:800;font-size:22px;color:#27ae60;margin-bottom:16px;">Our Services</h3>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;">
+              <li style="display:flex;align-items:center;gap:10px;color:var(--gray-dark);font-size:13.5px;"><span style="width:7px;height:7px;background:#27ae60;border-radius:50%;flex-shrink:0;"></span>Japanese Language Classes (JLPT / JFT)</li>
+              <li style="display:flex;align-items:center;gap:10px;color:var(--gray-dark);font-size:13.5px;"><span style="width:7px;height:7px;background:#27ae60;border-radius:50%;flex-shrink:0;"></span>Study in Japan Counseling</li>
+              <li style="display:flex;align-items:center;gap:10px;color:var(--gray-dark);font-size:13.5px;"><span style="width:7px;height:7px;background:#27ae60;border-radius:50%;flex-shrink:0;"></span>Student Visa Support</li>
+              <li style="display:flex;align-items:center;gap:10px;color:var(--gray-dark);font-size:13.5px;"><span style="width:7px;height:7px;background:#27ae60;border-radius:50%;flex-shrink:0;"></span>SSW Preparation &amp; Guidance</li>
+              <li style="display:flex;align-items:center;gap:10px;color:var(--gray-dark);font-size:13.5px;"><span style="width:7px;height:7px;background:#27ae60;border-radius:50%;flex-shrink:0;"></span>Interview Preparation</li>
+              <li style="display:flex;align-items:center;gap:10px;color:var(--gray-dark);font-size:13.5px;"><span style="width:7px;height:7px;background:#27ae60;border-radius:50%;flex-shrink:0;"></span>Career Counseling</li>
+              <li style="display:flex;align-items:center;gap:10px;color:var(--gray-dark);font-size:13.5px;"><span style="width:7px;height:7px;background:#27ae60;border-radius:50%;flex-shrink:0;"></span>Documentation Support</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="background: #fff">
+    <div class="container">
+      <div class="sec-header" style="align-items:flex-start; text-align:left">
+        <div class="tag-label">Our Values</div>
+        <h2>What We <span class="red">Stand For</span></h2>
+      </div>
+      <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+          ">
+        <div class="svc-card reveal-card">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="28" height="28" fill="currentColor">
+              <path
+                d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8V128h-.7l-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 241.8c-22.3-24.9-22.1-63.7 .9-88.1l-53.8-42.9L82.9 160h-.4V352h15.7l138.4 144.2c15.6 16.2 42.3 15.1 56.5-2.3l22.4-26.8 41.6 36.5c17.5 15.4 43.5 13.5 58.7-4.3l27-32.4c12.9 7.1 28.9 7.7 42.5-1L614.8 352H608V160l-261.8 49.6zM16 160c-8.8 0-16 7.2-16 16V352c0 17.7 14.3 32 32 32H64V160H16z" />
+            </svg>
+          </div>
+          <h3>Integrity</h3>
+          <p>
+            We provide honest, transparent advice and never compromise our
+            students' best interests for any reason.
+          </p>
+        </div>
+        <div class="svc-card reveal-card">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="28" height="28" fill="currentColor">
+              <path
+                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.4 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+            </svg>
+          </div>
+          <h3>Excellence</h3>
+          <p>
+            We strive for excellence in every service we provide, from visa
+            guidance to language test preparation.
+          </p>
+        </div>
+        <div class="svc-card reveal-card">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="28" height="28" fill="currentColor">
+              <path
+                d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+            </svg>
+          </div>
+          <h3>Student First</h3>
+          <p>
+            Every decision we make is centered around the best outcome for our
+            students and their families.
+          </p>
+        </div>
+        <div class="svc-card reveal-card">
+          <div class="svc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="28" height="28" fill="currentColor">
+              <path
+                d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2c0 0 0 0 0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4c0 0 0 0 0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" />
+            </svg>
+          </div>
+          <h3>Innovation</h3>
+          <p>
+            We continuously update our knowledge and methods to provide the
+            most current and effective guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO MESSAGE SECTION -->
+  <section class="section" style="background: var(--gray)">
+    <div class="container">
+      <div class="sec-header" style="align-items:flex-start; text-align:left">
+        <div class="tag-label">Our Leadership</div>
+        <h2>Message from the <span class="red">CEO</span></h2>
+      </div>
+      <div class="two-col" style="align-items: start;">
+        <!-- CEO Photo -->
+        <div class="col-img reveal-left" style="padding-bottom:0">
+          <div style="border-radius:20px; overflow:hidden; box-shadow:0 12px 40px rgba(0, 65, 120,0.18);">
+            <img src="photos/ceo.jpeg" alt="Arjun Neupane - Founder & CEO"
+              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:20px;">
+          </div>
+        </div>
+
+        <!-- CEO Message content -->
+        <div class="col-content reveal-right">
+          <p style="
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 20px;
+            color: #003F78;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--red);
+            padding-left: 20px;
+          ">"Your Gateway to Purpose-Driven Global Success"</p>
+
+          <p style="color: var(--gray-dark); line-height: 1.85; margin-bottom: 16px;">
+            At Sukriti Global, we believe that studying abroad is far more than simply pursuing an academic qualification. It is a transformative journey that shapes a student's future and broadens their global perspective. Our commitment is to ensure that this transition is not only successful, but truly life-changing.
+          </p>
+
+          <p style="color: var(--gray-dark); line-height: 1.85; margin-bottom: 16px;">
+            Our mission is founded on the principles of unwavering integrity, transparency, and student-centered guidance. Since our inception, we have remained committed to:
+          </p>
+
+          <ul style="list-style:none; padding:0; margin-bottom:20px; display:flex; flex-direction:column; gap:12px;">
+            <li style="display:flex; align-items:flex-start; gap:12px; line-height:1.75; color:var(--gray-dark);">
+              <span style="width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;margin-top:8px;"></span>
+              <span><strong style="color:#003F78;">Honest Guidance:</strong> Providing realistic expectations and ethical advice to every student.</span>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:12px; line-height:1.75; color:var(--gray-dark);">
+              <span style="width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;margin-top:8px;"></span>
+              <span><strong style="color:#003F78;">Transparent Processes:</strong> Maintaining clarity, trust, and accountability at every stage of the application journey.</span>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:12px; line-height:1.75; color:var(--gray-dark);">
+              <span style="width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;margin-top:8px;"></span>
+              <span><strong style="color:#003F78;">Personalized Counseling:</strong> Delivering tailored support based on genuine real-world experience rather than standardized approaches.</span>
+            </li>
+          </ul>
+
+          <p style="color: var(--gray-dark); line-height: 1.85; margin-bottom: 16px;">
+            While our foundation is rooted in deep expertise in Japanese education, we have evolved into a comprehensive global education consultancy. Today, we proudly support ambitious students seeking opportunities across a wide range of international destinations, bridging local talent with global opportunities.
+          </p>
+
+          <p style="color: var(--gray-dark); line-height: 1.85; margin-bottom: 32px;">
+            At Sukriti Global, we do more than process applications — we partner with students to build meaningful global futures driven by purpose, ambition, and success.
+          </p>
+
+          <!-- Signature card -->
+          <div style="
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 24px;
+            background: #fff;
+            border-radius: 16px;
+            border-left: 4px solid var(--red);
+            box-shadow: var(--shadow);
+          ">
+            <div>
+              <div style="font-family:Montserrat; font-weight:800; font-size:18px; color:#003F78; margin-bottom:4px;">Arjun Neupane</div>
+              <div style="font-size:14px; color:var(--red); font-weight:600;">Founder &amp; CEO</div>
+              <div style="font-size:13px; color:var(--gray-dark); margin-top:2px;">Sukriti Global Education Consultancy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR TEAM SECTION -->
+  <section class="section" style="background: #fff">
+    <div class="container">
+      <div class="sec-header" style="align-items:flex-start; text-align:left">
+        <div class="tag-label">Our Team</div>
+        <h2>Meet Our <span class="red">Professional Team</span></h2>
+        <p style="max-width:none; margin:0">Our experienced and dedicated team is committed to guiding students and professionals toward successful educational and career opportunities in Japan.</p>
+      </div>
+
+      <!-- Nirajan Pokharel Profile -->
+      <div class="reveal-card nirajan-profile" style="
+        background: var(--gray);
+        border-radius: 24px;
+        padding: 52px 48px;
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 52px;
+        align-items: start;
+        margin-top: 12px;
+      ">
+        <!-- Left: Photo + Identity -->
+        <div style="text-align: center; position: sticky; top: 100px;">
+          <div style="
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 36px rgba(0, 65, 120,0.18);
+          ">
+            <img src="photos/partner.jpeg" alt="Nirajan Pokharel"
+              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          </div>
+          <div style="font-family:Montserrat;font-weight:800;font-size:19px;color:#003F78;margin-bottom:10px;line-height:1.3;">Nirajan Pokharel</div>
+          <div class="tag-label" style="display:inline-block;">Founder / Managing Director</div>
+          <div style="margin-top:12px;font-size:13px;color:#666;line-height:1.6;">CEO, N&amp;N Innovation Co., Ltd.<br>Japan</div>
+        </div>
+
+        <!-- Right: Bio Content -->
+        <div>
+          <p style="font-style:italic;font-weight:700;color:#003F78;font-size:16px;margin-bottom:22px;padding-bottom:18px;border-bottom:2px solid #e8ecf4;">
+            Welcome to Sukriti Global Education Consultancy.
+          </p>
+          <p style="color:#555;line-height:1.8;margin-bottom:16px;font-size:14.5px;">
+            Mr. Nirajan Pokharel serves as the Founder and Managing Director of Sukriti Global Education Consultancy &amp; Japanese Language Training Center, as well as the CEO of N&amp;N Innovation Co., Ltd., Japan. With a distinguished career spanning education, aviation, international communication, and foreign workforce support, he has dedicated himself to bridging the gap between Nepal and Japan.
+          </p>
+          <p style="color:#555;line-height:1.8;margin-bottom:32px;font-size:14.5px;">
+            Mr. Pokharel provides comprehensive support for international students, Technical Intern Trainees, and Specified Skilled Workers (SSW). His expertise encompasses educational counseling, professional translation, visa navigation, and workforce coordination within Japan.
+          </p>
+
+          <div class="vision-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+            <div style="background:#fff;border-radius:14px;padding:24px 22px;border-left:4px solid #cc0000;box-shadow:0 2px 12px rgba(0, 65, 120,0.07);">
+              <div style="font-family:Montserrat;font-weight:700;font-size:14px;color:#cc0000;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;">Our Vision</div>
+              <p style="color:#555;line-height:1.75;font-size:13.5px;margin:0;">When we founded this institution, our vision was simple yet profound: to ensure that no student's ambition is ever limited by a border. We believe that international education is far more than an academic milestone—it is a gateway to personal transformation, cultural enrichment, and a decisive edge in the global workforce.</p>
+            </div>
+            <div style="background:#fff;border-radius:14px;padding:24px 22px;border-left:4px solid #003F78;box-shadow:0 2px 12px rgba(0, 65, 120,0.07);">
+              <div style="font-family:Montserrat;font-weight:700;font-size:14px;color:#003F78;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;">Our Commitment</div>
+              <p style="color:#555;line-height:1.75;font-size:13.5px;margin:0;">As Managing Director, I have witnessed how the right guidance can fundamentally change the trajectory of a student's life. That is why Sukriti Global was built upon the immovable pillars of Integrity, Transparency, and Expertise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nirlam Neupane -->
+      <div class="reveal-card" style="
+        background: var(--gray);
+        border-radius: 24px;
+        padding: 40px 48px;
+        box-shadow: var(--shadow);
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        margin-top: 28px;
+        flex-wrap: wrap;
+      ">
+        <!-- Photo -->
+        <div style="flex-shrink:0; text-align:center; min-width:160px;">
+          <div style="
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            overflow: hidden;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 36px rgba(0, 65, 120,0.18);
+          ">
+            <img src="photos/nirmala neupane.jpeg" alt="Nirmala Neupane"
+              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          </div>
+          <div style="font-family:Montserrat;font-weight:800;font-size:18px;color:#003F78;margin-bottom:4px;">Nirmala Neupane</div>
+          <div class="tag-label" style="display:inline-block;">International Director</div>
+        </div>
+        <!-- Divider -->
+        <div style="width:1px;background:#e0e4ef;flex-shrink:0;align-self:stretch;"></div>
+        <!-- Info -->
+        <div style="flex:1;min-width:220px;">
+          <p style="color:#555;line-height:1.8;font-size:14.5px;margin:0 0 14px 0;">
+            At Sukriti Global Education Consultancy, we believe that education is the most powerful tool for personal and professional transformation. Our commitment goes beyond simply processing applications; we are dedicated to shaping brighter futures for students who aspire to transcend borders and succeed on the global stage.
+          </p>
+          <p style="color:#555;line-height:1.8;font-size:14.5px;margin:0;">
+            As the International Director, my primary mission is to bridge the gap between local talent and world-class opportunities. To achieve this, I focus on building and maintaining robust global partnerships with prestigious institutions across Japan, the UK, New Zealand, and Europe. These alliances ensure that our students have access to diverse, reliable, and high-quality academic pathways tailored to their unique career goals.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-sec">
+    <div class="container">
+      <h2 class="anim-fadeup">Ready to Begin Your Study Abroad Journey?</h2>
+      <p class="anim-fadeup">
+        Contact us today for a free counselling session with our expert
+        advisors.
+      </p>
+      <a href="contact.html" class="btn-white anim-fadeup">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="f-brand">
+            <div class="footer-logo">
+              <div class="logo-wrap">
+                <img src="images/logo.png" alt="Sukriti Global" class="logo-img" style="width:100%;height:100%;object-fit:contain">
+              </div>
+              <div class="logo-text-block">
+                <span class="logo-title">Sukriti Global</span><span class="logo-subtitle">Education Consultancy</span>
+              </div>
+            </div>
+            <p>Your trusted partner for study abroad consulting in Nepal.</p>
+            <div class="f-socials">
+              <a href="https://www.facebook.com/profile.php?id=61583860509761&sk=reels_tab" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                </svg></a><a href="https://www.instagram.com/sukritiglobal/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></a><a href="https://www.tiktok.com/@sukritiglobal" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                </svg></a><a href="https://wa.me/9779851159978" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                </svg></a>
+            </div>
+          </div>
+          <div class="f-col">
+            <h4>Student Services</h4>
+            <ul>
+              <li>
+                <a href="services/visa-application.html">Visa Application</a>
+              </li>
+              <li>
+                <a href="services/pte-preparation.html">PTE Test Preparation</a>
+              </li>
+              <li>
+                <a href="services/ielts-training.html">IELTS Training</a>
+              </li>
+              <li>
+                <a href="services/japanese-language.html">Japanese Language</a>
+              </li>
+              <li><a href="services/jlpt.html">JLPT Preparation</a></li>
+                <li><a href="services/ssw-preparation.html">SSW Preparation</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Study Abroad</h4>
+            <ul>
+              <li><a href="study-australia.html">Australia</a></li>
+              <li><a href="study-usa.html">USA</a></li>
+              <li><a href="study-uk.html">UK</a></li>
+              <li><a href="study-japan.html">Japan</a></li>
+            <li><a href="study-newzealand.html">New Zealand</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Contact Us</h4>
+            <div class="f-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                style="vertical-align:middle">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg><span>Gongabu Chowk, Infinity Movies Building, Kathmandu</span>
+            </div>
+            <div class="f-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                style="vertical-align:middle">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg><span>+977-01-4978006</span>
+            </div>
+            <div class="f-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                style="vertical-align:middle">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+              </svg><span>info.sukritiglobal@gmail.com</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          &copy; 2025 Sukriti Global Education Consultancy. All Rights
+          Reserved.
+        </p>
+       
+          
+      </div>
+    </div>
+  </footer>
+  <button class="back-top" id="back-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+      style="vertical-align:middle">
+      <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" />
+    </svg>
+  </button>
+  <a href="https://wa.me/9779851159978?text=Hello%20Sukriti%20Global!" target="_blank" class="whatsapp-float"><svg
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor"
+      style="vertical-align:middle">
+      <path
+        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+    </svg></a>
+  <script src="js/main.js" defer></script>
+  <script>
+    (function(){
+      var v=document.getElementById('heroVideo');
+      if(!v)return;
+      v.play().catch(function(){});
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(e){
+          e[0].isIntersecting?v.play().catch(function(){}):v.pause();
+        },{threshold:0.1}).observe(document.getElementById('page-hero'));
+      }
+    })();
+  </script>
+</body>
+
+</html>

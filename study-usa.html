@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study in USA - Sukriti Global Education Consultancy</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: sans-serif;
+      overflow-x: hidden
+    }
+
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #003F78;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease
+    }
+
+    .preloader-ring {
+      width: 80px;
+      height: 80px;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-top-color: #CC0000;
+      border-right-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite
+    }
+
+    .preloader-logo {
+      position: absolute;
+      font-family: sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      color: #fff
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+    <style>
+    #page-hero { background: linear-gradient(135deg, #003F78 0%, #007bb2 55%, #00bfff 100%) !important; animation: none !important; }
+    .page-hero .page-hero-content { position: relative; z-index: 2; }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+
+<body>
+  <div id="preloader"
+    style="position:fixed;inset:0;background:linear-gradient(135deg, #003F78, #007BB2, #00BFFF);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity 0.6s,visibility 0.6s">
+    <div class="preloader-inner">
+      <div class="preloader-ring"></div>
+      <div class="preloader-logo"><img src="Sukriti Logo.png" alt="SG" style="width:100%;height:100%;object-fit:contain"
+          onerror="this.outerHTML='SG'"></div>
+    </div>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", function () { var p = document.getElementById("preloader"); if (p) { p.style.transition = "opacity 0.4s"; p.style.opacity = "0"; setTimeout(function () { p.style.display = "none"; }, 400); } });</script>
+  <header id="main-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-wrap"><img src="Sukriti Logo.png" alt="Logo" class="logo-img"
+            onerror="this.style.display='none';document.getElementById('logofb').style.display='flex'">
+          <div class="logo-fb" id="logofb" style="display:none">SG</div>
+        </div>
+        <div class="logo-text-block"><span class="logo-title">Sukriti Global</span><span class="logo-subtitle">Education
+            Consultancy</span></div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="has-dropdown"><a href="#" class="nav-link active">Study Abroad <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="currentColor" style="vertical-align:middle">
+              <path d="M7 10l5 5 5-5z" />
+            </svg></a>
+          <ul class="dropdown">
+            <li><a href="study-australia.html">Australia</a></li>
+            <li><a href="study-usa.html">USA</a></li>
+            <li><a href="study-uk.html">UK</a></li>
+            <li><a href="study-japan.html">Japan</a></li>
+            <li><a href="study-newzealand.html">New Zealand</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="#" class="nav-link">Student Services <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="currentColor" style="vertical-align:middle">
+              <path d="M7 10l5 5 5-5z" />
+            </svg></a>
+          <ul class="dropdown">
+            <li><a href="services/visa-application.html">Visa Application</a></li>
+            <li><a href="services/pte-preparation.html">PTE Test Preparation</a></li>
+            <li><a href="services/ielts-training.html">IELTS Training</a></li>
+            <li><a href="services/japanese-language.html">Japanese Language</a></li>
+            <li><a href="services/jlpt.html">JLPT Preparation</a></li>
+            <li><a href="services/ssw-preparation.html">SSW Preparation</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions"><a href="contact.html" class="btn-consult">Free Counselling</a></div>
+    </nav>
+  </header>
+
+  <section class="page-hero" id="page-hero">
+    <div class="page-hero-content">
+      <div style="font-size:60px;margin-bottom:16px"></div>
+      <h1 class="anim-fadeup">Study in USA</h1>
+      <div class="breadcrumb anim-fadeup"><a href="index.html">Home</a> <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+        </svg> <a href="#">Study Abroad</a> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+          height="1em" fill="currentColor" style="vertical-align:middle">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+        </svg> <span>USA</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="col-img reveal-left">
+          <img src="photos/usa.jpg" alt="Study in USA"
+            style="width:100%;border-radius:16px;box-shadow:var(--shadow-lg);object-fit:cover;">
+        </div>
+        <div class="col-content reveal-right">
+          <div class="tag-label">Study Abroad</div>
+          <h2>About Education in the <span class="red">United States</span></h2>
+          <p>The United States is one of the world's leading study destinations, offering unmatched academic diversity, cutting-edge research opportunities, and globally recognized degrees. With thousands of accredited institutions and flexible academic pathways, the USA attracts Nepali students seeking innovation, career growth, and long-term professional success.</p>
+          <p>Graduates from U.S. universities are highly valued worldwide for their practical skills, industry exposure, and global perspective. The U.S. education system is known for its flexibility and student-centered approach — students can choose from community colleges, universities, and research institutions, with the option to transfer between institutions.</p>
+          <p><strong>Why Choose the United States?</strong></p>
+          <ul class="check-list">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Home to the largest number of top-ranked universities in the world</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Wide range of programs and specializations across various disciplines</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Strong emphasis on research, innovation, and practical learning</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Opportunities for paid internships and on-campus employment</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Post-study work opportunities through Optional Practical Training (OPT)</li>
+          </ul>
+          <a href="contact.html" class="btn-primary">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--gray)">
+    <div class="container">
+      <div class="sec-header">
+        <div class="tag-label">Requirements</div>
+        <h2>Key <span class="red">Requirements</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px">
+        <div class="svc-card key-req-card reveal-card">
+          <div class="svc-icon svc-icon-red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></div>
+          <h3>Academic Qualification</h3>
+          <p>Minimum GPA 2.8 (or equivalent) for bachelor's and master's programs. Study gap of 2–5 years accepted for master's with valid justification.</p>
+          <div class="svc-details">
+            <ul>
+              <li>SEE + Grade 12 with minimum GPA 2.8 for undergraduate programs</li>
+              <li>Bachelor's degree (minimum 50%) required for postgraduate programs</li>
+              <li>Study gap up to 5 years accepted for master's with proper documentation</li>
+              <li>Notarized/attested transcripts and degree certificates required</li>
+              <li>NEB equivalency required for foreign board certificates</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card key-req-card reveal-card">
+          <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg></div>
+          <h3>English Proficiency</h3>
+          <p>IELTS 6.0 for bachelor's / IELTS 6.5 for master's. TOEFL iBT 61+ (bachelor's) / 80+ (master's) also accepted.</p>
+          <div class="svc-details">
+            <ul>
+              <li>IELTS: minimum 6.0 for undergraduate, 6.5 for postgraduate</li>
+              <li>TOEFL iBT: minimum 61 for bachelor's, 80 for master's</li>
+              <li>PTE Academic: minimum 50 for bachelor's, 58 for master's</li>
+              <li>Duolingo English Test accepted by select universities (85+)</li>
+              <li>Test scores must be valid (within 2 years of application date)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card key-req-card reveal-card">
+          <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+          <h3>Financial Proof</h3>
+          <p>Proof of funds covering tuition and living costs. Bank statements from family income, salary, property rental, or business income accepted.</p>
+          <div class="svc-details">
+            <ul>
+              <li>Community College / Associate: approx. NPR 30–45 Lakhs</li>
+              <li>Bachelor's programs: approx. NPR 45–65 Lakhs</li>
+              <li>Master's programs: approx. NPR 40–60 Lakhs</li>
+              <li>Income sources: salary, house rent, land lease, business documents</li>
+              <li>Education loan sanction letter also accepted as proof of funds</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card key-req-card reveal-card">
+          <div class="svc-icon svc-icon-red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div>
+          <h3>F-1 Visa Documentation</h3>
+          <p>Valid passport, I-20 form from a SEVP-certified institution, SEVIS registration fee payment, and DS-160 visa application required.</p>
+          <div class="svc-details">
+            <ul>
+              <li>Valid passport (minimum 6 months beyond intended stay)</li>
+              <li>I-20 form issued by SEVP-approved U.S. institution</li>
+              <li>SEVIS fee payment receipt (Form I-901)</li>
+              <li>DS-160 online visa application and visa interview appointment</li>
+              <li>SOP, 2–3 LORs, academic transcripts, and financial documents</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Fields of Study -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">Programs</div>
+        <h2>Top Fields of <span class="red">Study</span></h2>
+        <p style="max-width:620px;text-align:center;color:#555;margin-top:8px">The U.S. offers world-class programs across hundreds of disciplines. Here are the most in-demand fields for international students.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center">
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid var(--blue);flex:0 0 calc(25% - 18px);min-width:260px">
+          <img src="../../Usaimage/business.jpg" alt="Business & Management" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Business &amp; Management</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Programs designed to develop leadership, entrepreneurship, and global business skills. MBA and BBA programs are highly popular among Nepali students.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid #22c55e;flex:0 0 calc(25% - 18px);min-width:260px">
+          <img src="../../Usaimage/it.jpg" alt="Computer Science & IT" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Computer Science &amp; IT</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Highly in-demand programs focused on software development, cybersecurity, AI, and emerging technologies with excellent career prospects.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid var(--red);flex:0 0 calc(25% - 18px);min-width:260px">
+          <img src="../../Usaimage/engineer.jpg" alt="Engineering & STEM" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Engineering &amp; STEM</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Strong academic and research-based programs in mechanical, civil, electrical, and chemical engineering with excellent global career prospects.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid #f59e0b;flex:0 0 calc(25% - 18px);min-width:260px">
+          <img src="../../Usaimage/ai.jpg" alt="Data Science & AI" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Data Science &amp; AI</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Advanced programs focused on analytics, machine learning, and modern technological innovation. STEM-designated programs qualify for extended OPT.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid #8b5cf6;flex:0 0 calc(25% - 18px);min-width:260px">
+          <img src="../../Usaimage/health.jpg" alt="Health Sciences" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Health Sciences &amp; Public Health</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Career-focused programs preparing students for healthcare, research, and public service sectors with strong employment outcomes.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid #0d9488;flex:0 0 calc(25% - 18px);min-width:260px">
+          <img src="../../Usaimage/Finance, Economics &amp; Liberal Arts.jpg" alt="Finance & Economics" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Finance, Economics &amp; Liberal Arts</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Programs providing strong analytical and financial expertise alongside creative, critical thinking, and communication skills for global careers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Process -->
+  <section class="section" style="background:var(--gray)">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">How to Apply</div>
+        <h2>Application <span class="red">Process</span></h2>
+        <p style="max-width:600px;text-align:center;color:#555;margin-top:8px">Follow these steps to successfully apply to a U.S. university with guidance from Sukriti Global.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;max-width:1000px;margin:0 auto">
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">1</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">Free Counselling &amp; University Selection</h3><p style="color:#555;font-size:14px;line-height:1.6">Meet with our expert counselors to identify suitable universities and programs based on your academic profile, budget, and career goals.</p></div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">2</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">English Test Preparation</h3><p style="color:#555;font-size:14px;line-height:1.6">Prepare for IELTS, TOEFL, or PTE through our in-house training programs to meet the required scores for your chosen university.</p></div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">3</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">Document Preparation &amp; Application</h3><p style="color:#555;font-size:14px;line-height:1.6">Prepare SOP, LORs, and all required documents. Submit applications to shortlisted universities and receive your I-20 form upon offer acceptance.</p></div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:#f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">4</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">Financial Documentation &amp; SEVIS</h3><p style="color:#555;font-size:14px;line-height:1.6">Prepare financial proof, pay the SEVIS fee (Form I-901), and complete the DS-160 online visa application form.</p></div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:#8b5cf6;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">5</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">F-1 Visa Interview &amp; Departure</h3><p style="color:#555;font-size:14px;line-height:1.6">Attend the F-1 student visa interview at the U.S. Embassy in Kathmandu. Upon approval, complete pre-departure briefing and fly to the USA.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work & OPT Opportunities -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">Career &amp; Work</div>
+        <h2>Work &amp; Career <span class="red">Opportunities</span></h2>
+        <p style="max-width:620px;text-align:center;color:#555;margin-top:8px">The USA offers strong work and career pathways for international students during and after their studies.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-left:4px solid var(--blue)">
+          <h3 style="font-size:17px;margin-bottom:12px;color:var(--blue-dark)">On-Campus Employment (F-1)</h3>
+          <p style="color:#555;font-size:14px;line-height:1.7">F-1 students may work on campus for up to <strong>20 hours per week</strong> during academic sessions and full-time during official vacation periods. On-campus jobs include library, cafeteria, research assistant, and administrative roles.</p>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-left:4px solid #22c55e">
+          <h3 style="font-size:17px;margin-bottom:12px;color:#166534">Optional Practical Training (OPT)</h3>
+          <p style="color:#555;font-size:14px;line-height:1.7">After graduation, F-1 students are eligible for <strong>12 months of OPT</strong> — paid work authorization in a field related to your degree. No employer sponsorship needed during OPT period. Applications submitted 90 days before graduation.</p>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-left:4px solid var(--red)">
+          <h3 style="font-size:17px;margin-bottom:12px;color:#7f1d1d">STEM OPT Extension</h3>
+          <p style="color:#555;font-size:14px;line-height:1.7">Graduates from STEM-designated programs (CS, Data Science, Engineering, etc.) qualify for a <strong>24-month STEM OPT extension</strong> — totaling up to 3 years of post-study work authorization in the USA.</p>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-left:4px solid #f59e0b">
+          <h3 style="font-size:17px;margin-bottom:12px;color:#78350f">Estimated Living Costs</h3>
+          <ul style="color:#555;font-size:14px;line-height:2;padding-left:0;list-style:none">
+            <li>🏠 Accommodation: USD $600–1,200/month</li>
+            <li>🍽 Food &amp; groceries: USD $300–500/month</li>
+            <li>🚌 Transport: USD $50–150/month</li>
+            <li>📚 Books &amp; supplies: USD $100–200/month</li>
+            <li>💰 Total est.: USD $1,100–2,100/month</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scholarships -->
+  <section class="section" style="background:var(--gray)">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">Financial Aid</div>
+        <h2>Scholarships &amp; <span class="red">Financial Aid</span></h2>
+        <p style="max-width:600px;text-align:center;color:#555;margin-top:8px">Several scholarship programs are available for international students studying in the United States.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-top:4px solid var(--red);flex:0 0 calc(25% - 18px);min-width:260px">
+          <h3 style="font-size:18px;margin-bottom:10px">Fulbright Foreign Student Program</h3>
+          <p style="color:#555;font-size:14px;line-height:1.6">A prestigious U.S. government-funded scholarship for graduate students and young professionals. Covers tuition, living allowance, health insurance, and travel.</p>
+          <div style="margin-top:14px;padding:10px 14px;background:#fef2f2;border-radius:8px;font-size:13px;color:#991b1b;font-weight:600">Fully Funded — Highly Competitive</div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-top:4px solid var(--blue)">
+          <h3 style="font-size:18px;margin-bottom:10px">University Merit Scholarships</h3>
+          <p style="color:#555;font-size:14px;line-height:1.6">Many U.S. universities offer merit-based scholarships ranging from partial to full tuition waivers for high-achieving international students. Awarded based on GPA, test scores, and SOP quality.</p>
+          <div style="margin-top:14px;padding:10px 14px;background:#eff6ff;border-radius:8px;font-size:13px;color:#1e40af;font-weight:600">10–100% Tuition Reduction</div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-top:4px solid #22c55e;flex:0 0 calc(25% - 18px);min-width:260px">
+          <h3 style="font-size:18px;margin-bottom:10px">Graduate Assistantships (RA/TA)</h3>
+          <p style="color:#555;font-size:14px;line-height:1.6">Master's and PhD students can apply for Research Assistantships (RA) or Teaching Assistantships (TA) that often include a stipend, tuition waiver, and health insurance.</p>
+          <div style="margin-top:14px;padding:10px 14px;background:#f0fdf4;border-radius:8px;font-size:13px;color:#166534;font-weight:600">Stipend + Tuition Waiver</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">FAQ</div>
+        <h2>Frequently Asked <span class="red">Questions</span></h2>
+      </div>
+      <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">Do I need IELTS or TOEFL to study in the USA? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">Yes, most U.S. universities require proof of English proficiency. IELTS, TOEFL iBT, and PTE Academic are the most widely accepted. Some universities also accept the Duolingo English Test. Minimum scores vary by institution and program level.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">How long does the F-1 student visa process take? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">The F-1 visa process typically takes 4–8 weeks from the time you receive your I-20 form. It's recommended to begin the process at least 3 months before your program start date to account for document preparation and visa interview scheduling.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">Can I work while studying in the USA on an F-1 visa? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">Yes. F-1 students are allowed to work on campus for up to 20 hours per week during the academic semester. Off-campus work is allowed through Curricular Practical Training (CPT) and Optional Practical Training (OPT) after completing at least one academic year.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">What is OPT and how does it work for Nepali graduates? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">Optional Practical Training (OPT) allows F-1 graduates to work in the USA for up to 12 months in a field related to their degree. STEM graduates are eligible for a 24-month extension, giving them up to 3 years total. Many Nepali students use OPT as a pathway to H-1B visa sponsorship.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">What is the total cost of studying in the USA for Nepali students? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">Tuition fees vary widely: community colleges USD $6,000–15,000/year; state universities USD $15,000–30,000/year; private universities USD $30,000–60,000+/year. Living costs typically add USD $12,000–25,000/year depending on location. Scholarships and assistantships can significantly reduce these costs.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">Can I bring my family with me on an F-1 student visa? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">Yes. Your spouse and unmarried children under 21 can accompany you on an F-2 dependent visa. However, F-2 visa holders are not permitted to work in the USA. F-2 dependents may study part-time but cannot pursue a full-time degree program.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-sec">
+    <div class="container">
+      <h2 class="anim-fadeup">Ready to Study in USA?</h2>
+      <p class="anim-fadeup">Get expert guidance from our counselors who specialize in USA student admissions.</p>
+      <a href="contact.html" class="btn-white anim-fadeup">Book Free Counselling Session</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="f-brand">
+            <div class="footer-logo">
+              <div class="logo-wrap">
+                <img src="images/logo.png" alt="Sukriti Global" class="logo-img" style="width:100%;height:100%;object-fit:contain">
+              </div>
+              <div class="logo-text-block"><span class="logo-title">Sukriti Global</span><span
+                  class="logo-subtitle">Education Consultancy</span></div>
+            </div>
+            <p>Your trusted partner for study abroad consulting in Nepal.</p>
+            <div class="f-socials"><a href="https://www.facebook.com/profile.php?id=61583860509761&sk=reels_tab" target="_blank"><svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" fill="currentColor"
+                  style="vertical-align:middle">
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                </svg></a><a href="https://www.instagram.com/sukritiglobal/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></a><a href="https://www.tiktok.com/@sukritiglobal" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                </svg></a></div>
+          </div>
+          <div class="f-col">
+            <h4>Study Abroad</h4>
+            <ul>
+              <li><a href="study-australia.html">Australia</a></li>
+              <li><a href="study-usa.html">USA</a></li>
+              <li><a href="study-uk.html">UK</a></li>
+              <li><a href="study-japan.html">Japan</a></li>
+              <li><a href="study-newzealand.html">New Zealand</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Student Services</h4>
+            <ul>
+              <li><a href="services/visa-application.html">Visa Application</a></li>
+              <li><a href="services/pte-preparation.html">PTE Preparation</a></li>
+              <li><a href="services/ielts-training.html">IELTS Training</a></li>
+              <li><a href="services/japanese-language.html">Japanese Language</a></li>
+              <li><a href="services/ssw-preparation.html">SSW Preparation</a></li>
+              <li><a href="services/jlpt.html">JLPT Preparation</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Contact</h4>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg><span>Gongabu Chowk, Infinity Movies Bldg,
+                Kathmandu</span></div>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg><span>+977-01-4978006</span></div>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+              </svg><span>info.sukritiglobal@gmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Sukriti Global Education Consultancy. All Rights Reserved.</p>
+      
+      </div>
+    </div>
+  </footer>
+  <button class="back-top" id="back-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+      height="1em" fill="currentColor" style="vertical-align:middle">
+      <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" />
+    </svg></button>
+  <a href="https://wa.me/9779851159978?text=Hello%20Sukriti%20Global!" target="_blank" class="whatsapp-float"><svg
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor"
+      style="vertical-align:middle">
+      <path
+        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+    </svg></a>
+  <script src="js/main.js" defer></script>
+  <script>
+    (function(){
+      var v=document.getElementById('heroVideo');
+      if(!v)return;
+      v.play().catch(function(){});
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(e){
+          e[0].isIntersecting?v.play().catch(function(){}):v.pause();
+        },{threshold:0.1}).observe(document.getElementById('page-hero'));
+      }
+    })();
+  </script>
+</body>
+
+</html>

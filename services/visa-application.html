@@ -1,0 +1,619 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visa Application - Sukriti Global Education Consultancy</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+    <style>
+    #page-hero { background: linear-gradient(135deg, #003F78 0%, #007bb2 55%, #00bfff 100%) !important; animation: none !important; }
+    .page-hero .page-hero-content { position: relative; z-index: 2; }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;overflow-x:hidden}
+
+    /* ── Preloader ── */
+    #preloader{position:fixed;inset:0;background:linear-gradient(135deg,#003F78,#007bb2,#00bfff);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .6s}
+    .preloader-ring{width:80px;height:80px;border:4px solid rgba(255,255,255,.15);border-top-color:#cc0000;border-right-color:#fff;border-radius:50%;animation:spin 1s linear infinite}
+    .preloader-logo{position:absolute;width:50px;height:50px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* ── Video hero ── */
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity 1.2s ease}
+    .hero-video.loaded{opacity:1}
+    .hero-video-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0, 50, 100,.72) 0%,rgba(0, 65, 120,.55) 40%,rgba(100,0,0,.45) 100%)}
+    .page-hero .page-hero-content{position:relative;z-index:2}
+    .page-hero .orb-layer{position:absolute;inset:0;z-index:1;pointer-events:none}
+
+    /* ── Global keyframes ── */
+    @keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+    @keyframes orbFloat{0%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.1)}66%{transform:translate(-25px,20px) scale(.92)}100%{transform:translate(0,0) scale(1)}}
+    @keyframes orbFloat2{0%{transform:translate(0,0) scale(1)}33%{transform:translate(-35px,25px) scale(1.08)}66%{transform:translate(30px,-18px) scale(.94)}100%{transform:translate(0,0) scale(1)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeLeft{from{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes fadeRight{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes badgeBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+    @keyframes rotateBadge{0%,100%{transform:rotate(-3deg) scale(1)}50%{transform:rotate(3deg) scale(1.05)}}
+    @keyframes cardFloat{0%,100%{transform:translateY(0) rotateX(0deg)}50%{transform:translateY(-6px) rotateX(2deg)}}
+    @keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(0, 65, 120,.2)}50%{box-shadow:0 0 0 12px rgba(0, 65, 120,0)}}
+
+    /* ── Reveal system ── */
+    .rv{opacity:0;transform:translateY(36px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+    .rv.rl{transform:translateX(-46px)}
+    .rv.rr{transform:translateX(46px)}
+    .rv.on{opacity:1!important;transform:none!important}
+    .rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}
+    .rv-d4{transition-delay:.4s}.rv-d5{transition-delay:.5s}
+
+    /* ══════════════════════════════
+       INTRO SECTION
+    ══════════════════════════════ */
+    .va-intro{
+      padding:96px 0 80px;
+      background:linear-gradient(135deg,#ffffff 0%,#eef5ff 30%,#fff3f3 65%,#f5f9ff 100%);
+      background-size:300% 300%;
+      animation:gradShift 14s ease infinite;
+      position:relative;overflow:hidden;
+    }
+    .va-intro::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,61,153,.07) 0%,transparent 70%);top:-250px;right:-180px;filter:blur(60px);animation:orbFloat 16s ease-in-out infinite;pointer-events:none}
+    .va-intro::after{content:'';position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(204,0,0,.05) 0%,transparent 70%);bottom:-120px;left:-100px;filter:blur(50px);animation:orbFloat2 18s ease-in-out infinite;pointer-events:none}
+
+    .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+    @media(max-width:860px){.intro-grid{grid-template-columns:1fr;gap:40px}}
+
+    .intro-tag{display:inline-block;background:linear-gradient(90deg,rgba(0, 65, 120,.08),rgba(204,0,0,.08));color:#003F78;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:100px;border:1px solid rgba(0, 65, 120,.12);margin-bottom:14px}
+    .intro-h2{font-size:clamp(26px,3.5vw,40px);font-weight:900;color:#003F78;line-height:1.2;margin-bottom:18px}
+    .intro-h2 .red{background:linear-gradient(90deg,#cc0000,#ff3333);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .intro-p{color:#555;line-height:1.85;margin-bottom:14px;font-size:15px}
+
+    .check-list{list-style:none;margin:20px 0 28px}
+    .check-list li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:#333;margin-bottom:10px;font-weight:500;transition:transform .2s}
+    .check-list li:hover{transform:translateX(4px)}
+    .check-list li svg{flex-shrink:0;margin-top:2px}
+
+    /* image wrap */
+    .va-img-wrap{position:relative;border-radius:20px;overflow:hidden;height:460px;box-shadow:0 24px 64px rgba(0, 65, 120,.2);transform-style:preserve-3d}
+    .va-img-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+    .va-img-wrap:hover img{transform:scale(1.05)}
+    .va-img-badge{position:absolute;bottom:24px;left:24px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-radius:14px;padding:14px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(0,0,0,.14);animation:badgeBounce 3s ease-in-out infinite}
+    .va-img-badge .bnum{font-size:28px;font-weight:900;color:#cc0000;line-height:1}
+    .va-img-badge .btxt{font-size:12px;font-weight:600;color:#333;line-height:1.4}
+    /* 3D tilt overlay shimmer */
+    .va-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.12) 50%,transparent 70%);background-size:200% 100%;animation:shimmer 4s linear infinite;pointer-events:none}
+
+    /* ══════════════════════════════
+       WHY CHOOSE US
+    ══════════════════════════════ */
+    .va-why{padding:88px 0 72px;position:relative;overflow:hidden}
+    .va-why-bg{position:absolute;inset:0;background:linear-gradient(135deg,#002244 0%,#003F78 30%,#004E96 55%,#5c0000 80%,#002244 100%);background-size:300% 300%;animation:gradShift 10s ease infinite}
+    .va-why-bg::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E")}
+    .why-orb1{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,100,255,.22) 0%,transparent 70%);top:-160px;right:-100px;filter:blur(55px);animation:orbFloat 11s ease-in-out infinite;pointer-events:none}
+    .why-orb2{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(204,0,0,.25) 0%,transparent 70%);bottom:-80px;left:-80px;filter:blur(50px);animation:orbFloat2 14s ease-in-out infinite;pointer-events:none}
+    .why-orb3{position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(0,180,255,.15) 0%,transparent 70%);top:40%;left:45%;filter:blur(40px);animation:orbFloat 8s ease-in-out infinite -3s;pointer-events:none}
+    .va-why>.container{position:relative;z-index:1}
+
+    .why-tag{display:inline-block;background:rgba(255,255,255,.12);color:#fff;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:100px;border:1px solid rgba(255,255,255,.2);margin-bottom:16px}
+    .why-h2{font-size:clamp(30px,4vw,48px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:12px}
+    .why-sub{color:rgba(255,255,255,.7);font-size:16px;max-width:520px;margin:0 auto 52px;line-height:1.7}
+
+    .why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    @media(max-width:1100px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:680px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:420px){.why-grid{grid-template-columns:1fr}}
+
+    .why-card{
+      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 18px;text-align:center;
+      backdrop-filter:blur(12px);
+      transition:transform .4s cubic-bezier(.34,1.56,.64,1),background .3s,box-shadow .3s;
+      transform-style:preserve-3d;cursor:default;
+    }
+    .why-card:hover{transform:translateY(-12px) rotateX(4deg) rotateY(-3deg);background:rgba(255,255,255,.13);box-shadow:0 20px 48px rgba(0,0,0,.3)}
+    .wc-icon{width:56px;height:56px;background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.05));border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:1px solid rgba(255,255,255,.18);transition:transform .3s}
+    .why-card:hover .wc-icon{transform:scale(1.15) rotateZ(5deg)}
+    .why-card h4{color:#fff;font-size:14px;font-weight:700;margin-bottom:8px}
+    .why-card p{color:rgba(255,255,255,.6);font-size:12.5px;line-height:1.6}
+
+    /* ══════════════════════════════
+       9-STEP FRAMEWORK
+    ══════════════════════════════ */
+    .va-fw{padding:96px 0 80px;position:relative;overflow:hidden}
+    .va-fw-bg{position:absolute;inset:0;background:linear-gradient(135deg,#f5f9ff 0%,#fff 50%,#fff4f4 100%);z-index:0}
+    .va-fw-bg::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0, 65, 120,.05) 0%,transparent 70%);top:-250px;left:-180px;filter:blur(70px);animation:orbFloat 18s ease-in-out infinite}
+    .va-fw-bg::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(204,0,0,.05) 0%,transparent 70%);bottom:-150px;right:-120px;filter:blur(60px);animation:orbFloat2 20s ease-in-out infinite}
+    .va-fw>.container{position:relative;z-index:1}
+
+    .sec-label{display:inline-block;background:linear-gradient(90deg,rgba(0, 65, 120,.08),rgba(204,0,0,.08));color:#003F78;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;padding:6px 18px;border-radius:100px;border:1px solid rgba(0, 65, 120,.12);margin-bottom:14px}
+    .sec-h2{font-size:clamp(28px,4vw,46px);font-weight:900;color:#003F78;line-height:1.15;margin-bottom:14px}
+    .sec-h2 .rg{background:linear-gradient(90deg,#cc0000,#ff3333);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .sec-sub{color:#666;font-size:16px;line-height:1.7;max-width:560px;margin:0 auto 56px}
+
+    /* 3D framework grid */
+    .fw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;perspective:1200px}
+    @media(max-width:960px){.fw-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:580px){.fw-grid{grid-template-columns:1fr}}
+
+    .fw-card{
+      background:#fff;border-radius:18px;padding:28px;
+      box-shadow:0 4px 20px rgba(0, 65, 120,.08);
+      border:1px solid rgba(0, 65, 120,.06);
+      position:relative;overflow:hidden;
+      transform-style:preserve-3d;
+      transition:transform .5s cubic-bezier(.34,1.56,.64,1),box-shadow .4s,border-color .3s;
+      cursor:default;
+    }
+    .fw-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#003F78,#0055cc,#cc0000);transform:scaleX(0);transform-origin:left;transition:transform .4s ease;border-radius:18px 18px 0 0}
+    .fw-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0, 65, 120,.02),rgba(204,0,0,.02));opacity:0;transition:opacity .3s}
+    .fw-card:hover{transform:translateY(-12px) rotateX(4deg) rotateY(-2deg) scale(1.02);box-shadow:0 28px 60px rgba(0, 65, 120,.16);border-color:rgba(0, 65, 120,.12)}
+    .fw-card:hover::before{transform:scaleX(1)}
+    .fw-card:hover::after{opacity:1}
+
+    .fw-badge{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#003F78,#005FA3);color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 16px rgba(0, 65, 120,.3);transition:transform .4s cubic-bezier(.34,1.56,.64,1),background .3s;animation:pulseGlow 3s ease-in-out infinite}
+    .fw-card:hover .fw-badge{transform:scale(1.15) rotateZ(-8deg);background:linear-gradient(135deg,#cc0000,#ff3333)}
+    .fw-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+    .fw-head h3{font-size:15.5px;font-weight:700;color:#003F78;line-height:1.3}
+    .fw-card>p{color:#777;font-size:13.5px;line-height:1.7;margin-bottom:14px}
+    .fw-list{list-style:none}
+    .fw-list li{display:flex;align-items:center;gap:8px;font-size:13px;color:#444;margin-bottom:7px;font-weight:500;transition:transform .2s,color .2s}
+    .fw-list li:hover{transform:translateX(4px);color:#003F78}
+    .fw-list li svg{flex-shrink:0}
+
+    /* number watermark */
+    .fw-card .fw-watermark{position:absolute;bottom:-10px;right:12px;font-size:80px;font-weight:900;color:rgba(0, 65, 120,.04);line-height:1;pointer-events:none;transition:color .3s}
+    .fw-card:hover .fw-watermark{color:rgba(0, 65, 120,.07)}
+
+    /* ══════════════════════════════
+       CTA
+    ══════════════════════════════ */
+    .cta-sec{padding:88px 0;position:relative;overflow:hidden;text-align:center;background:#ffffff}
+    .cta-bg{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 8v24M8 20h24' stroke='%23001f4d' stroke-width='1' stroke-opacity='0.08'/%3E%3C/svg%3E");background-size:40px 40px;pointer-events:none}
+    .cta-orb1{display:none}
+    .cta-orb2{display:none}
+    .cta-sec>.container{position:relative;z-index:1}
+    .cta-sec h2{font-size:clamp(26px,4vw,44px);font-weight:900;color:#003F78;margin-bottom:14px}
+    .cta-sec p{color:#555;font-size:16px;margin-bottom:32px;line-height:1.6;max-width:560px;margin-left:auto;margin-right:auto}
+    .btn-white{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#cc0000,#ff3b4a);color:#fff;font-weight:700;font-size:15px;padding:15px 40px;border-radius:50px;text-decoration:none;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;box-shadow:0 6px 24px rgba(204,0,0,.35)}
+    .btn-white:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 16px 40px rgba(204,0,0,.5)}
+    .btn-primary{display:inline-block;background:linear-gradient(90deg,#cc0000,#ff3333);color:#fff;font-weight:700;font-size:15px;padding:14px 36px;border-radius:50px;text-decoration:none;box-shadow:0 6px 20px rgba(204,0,0,.35);transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+    .btn-primary:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 14px 36px rgba(204,0,0,.45)}
+  </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-ring"></div>
+    <div class="preloader-logo">
+      <img src="../Sukriti Logo.png" alt="SG" style="width:100%;height:100%;object-fit:contain" onerror="this.outerHTML='SG'"/>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    var p=document.getElementById("preloader");
+    if(p){p.style.opacity="0";setTimeout(function(){p.style.display="none"},600)}
+  });
+</script>
+
+<!-- Header -->
+<header id="main-header">
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">
+      <div class="logo-wrap">
+        <img src="../Sukriti Logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none';document.getElementById('logofb').style.display='flex';"/>
+        <div class="logo-fb" id="logofb" style="display:none">SG</div>
+      </div>
+      <div class="logo-text-block">
+        <span class="logo-title">Sukriti Global</span>
+        <span class="logo-subtitle">Education Consultancy</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="../about.html" class="nav-link">About Us</a></li>
+      <li class="has-dropdown">
+        <a href="#" class="nav-link">Study Abroad <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=".75em" height=".75em" fill="currentColor" style="vertical-align:middle"><path d="M7 10l5 5 5-5z"/></svg></a>
+        <ul class="dropdown">
+          <li><a href="../study-australia.html">Australia</a></li>
+          <li><a href="../study-usa.html">USA</a></li>
+          <li><a href="../study-uk.html">UK</a></li>
+          <li><a href="../study-japan.html">Japan</a></li>
+            <li><a href="../study-newzealand.html">New Zealand</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#" class="nav-link active">Student Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=".75em" height=".75em" fill="currentColor" style="vertical-align:middle"><path d="M7 10l5 5 5-5z"/></svg></a>
+        <ul class="dropdown">
+          <li><a href="visa-application.html">Visa Application</a></li>
+          <li><a href="pte-preparation.html">PTE Test Preparation</a></li>
+          <li><a href="ielts-training.html">IELTS Training</a></li>
+          <li><a href="japanese-language.html">Japanese Language</a></li>
+          <li><a href="jlpt.html">JLPT Preparation</a></li>
+          <li><a href="ssw-preparation.html">SSW Preparation</a></li>
+        </ul>
+      </li>
+      <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions"><a href="../contact.html" class="btn-consult">Free Counselling</a></div>
+  </nav>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero" id="page-hero">
+  <!-- video background (add hero-video.mp4 to photos/ folder) -->
+
+  <div class="page-hero-content">
+    <div style="font-size:52px;margin-bottom:14px;animation:fadeUp .8s ease both">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zm-8-2c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0-4.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM8.5 8h7v1.5h-7zm0 2.5h7V12h-7z"/>
+      </svg>
+    </div>
+    <h1 style="animation:fadeUp .8s .1s ease both">Visa Application</h1>
+    <div class="breadcrumb" style="animation:fadeUp .8s .2s ease both">
+      <a href="../index.html">Home</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <a href="#">Services</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>Visa Application</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 1. INTRO ══ -->
+<section class="va-intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="rv rl">
+        <div class="intro-tag">Our Services</div>
+        <h2 class="intro-h2">Visa Application <span class="red">at Sukriti Global</span></h2>
+        <p class="intro-p">Our expert visa counselors have a proven track record of helping Nepali students secure student visas to Australia, USA, UK, and Japan — with comprehensive support at every step.</p>
+        <p class="intro-p">We handle all documentation, guide you through interviews, and ensure your application is complete and accurate to maximize approval chances. Our team stays updated on the latest visa policies for each country.</p>
+        <ul class="check-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="#cc0000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Expert guidance by qualified professionals</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="#cc0000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Personalized support throughout the process</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="#cc0000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>High success rate and proven track record</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="#cc0000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Affordable and transparent pricing</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="#cc0000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Post-service follow-up and support</li>
+        </ul>
+        <a href="../contact.html" class="btn-primary">Enquire Now</a>
+      </div>
+      <div class="rv rr">
+        <div class="va-img-wrap">
+          <img src="../photos/visa-application.webp" alt="Visa Application Services" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#003F78,#005FA3)'"/>
+          <div class="va-img-badge">
+            <div class="bnum">98%</div>
+            <div class="btxt">Visa<br>Success Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 2. WHY CHOOSE US ══ -->
+<section class="va-why">
+  <div class="va-why-bg"></div>
+  <div class="why-orb1"></div><div class="why-orb2"></div><div class="why-orb3"></div>
+  <div class="container">
+    <div class="rv" style="text-align:center">
+      <div class="why-tag">Why Choose Us</div>
+      <h2 class="why-h2">Your Success Is <span style="color:#ffb3b3">Our Mission</span></h2>
+      <p class="why-sub">We combine deep expertise, personal care, and proven systems to give every student the best possible chance of visa success.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px" class="why-grid">
+      <div class="why-card rv rv-d1">
+        <div class="wc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="rgba(255,255,255,.9)"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg></div>
+        <h4>High Success Rate</h4>
+        <p>98% visa approval rate across all destinations.</p>
+      </div>
+      <div class="why-card rv rv-d2">
+        <div class="wc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="rgba(255,255,255,.9)"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+        <h4>Certified Counselors</h4>
+        <p>Licensed agents with years of hands-on experience.</p>
+      </div>
+      <div class="why-card rv rv-d3">
+        <div class="wc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="rgba(255,255,255,.9)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+        <h4>End-to-End Support</h4>
+        <p>From eligibility check to pre-departure briefing.</p>
+      </div>
+      <div class="why-card rv rv-d4">
+        <div class="wc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="rgba(255,255,255,.9)"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+        <h4>Transparent Pricing</h4>
+        <p>No hidden fees. Honest and affordable consultancy.</p>
+      </div>
+      <div class="why-card rv rv-d5">
+        <div class="wc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="rgba(255,255,255,.9)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+        <h4>Multi-Destination</h4>
+        <p>AU, USA, UK &amp; Japan visas covered.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. 9-STEP FRAMEWORK ══ -->
+<section class="va-fw">
+  <div class="va-fw-bg"></div>
+  <div class="container">
+    <div class="rv" style="text-align:center">
+      <div class="sec-label">Our Process</div>
+      <h2 class="sec-h2">9-Step <span class="rg">Excellence Framework</span></h2>
+      <p class="sec-sub">Each phase is carefully crafted to ensure maximum probability of success and minimum stress for every student.</p>
+    </div>
+    <div class="fw-grid">
+
+      <div class="fw-card rv rv-d1">
+        <span class="fw-watermark">1</span>
+        <div class="fw-head"><div class="fw-badge">1</div><h3>Eligibility Assessment</h3></div>
+        <p>Comprehensive evaluation of academic profile, financial capability, language proficiency, and career objectives.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Academic transcript review</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Financial assessment</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Language proficiency check</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Career goal alignment</li>
+        </ul>
+      </div>
+
+      <div class="fw-card rv rv-d2">
+        <span class="fw-watermark">2</span>
+        <div class="fw-head"><div class="fw-badge">2</div><h3>Career &amp; Country Strategy</h3></div>
+        <p>Personalized guidance on selecting countries matching your career aspirations and immigration goals.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Country comparison</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Job market analysis</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Immigration pathways</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Cultural fit assessment</li>
+        </ul>
+      </div>
+
+      <div class="fw-card rv rv-d3">
+        <span class="fw-watermark">3</span>
+        <div class="fw-head"><div class="fw-badge">3</div><h3>University &amp; Program Selection</h3></div>
+        <p>Strategic shortlisting of universities based on rankings, scholarships, and program fit.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>University rankings</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Scholarship availability</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Program alignment</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Success probability analysis</li>
+        </ul>
+      </div>
+
+      <div class="fw-card rv rv-d1">
+        <span class="fw-watermark">4</span>
+        <div class="fw-head"><div class="fw-badge">4</div><h3>Application Documentation</h3></div>
+        <p>End-to-end support for crafting compelling applications with quality checks at every stage.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SOP drafting &amp; editing</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>LOR guidance</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Transcript preparation</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Final application review</li>
+        </ul>
+      </div>
+
+      <div class="fw-card rv rv-d2">
+        <span class="fw-watermark">5</span>
+        <div class="fw-head"><div class="fw-badge">5</div><h3>Offer Evaluation &amp; Acceptance</h3></div>
+        <p>Expert guidance on comparing offers and negotiating the best scholarships available.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Scholarship negotiation</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Offer comparison</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Deadline management</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Fee payment guidance</li>
+        </ul>
+      </div>
+
+      <div class="fw-card rv rv-d3">
+        <span class="fw-watermark">6</span>
+        <div class="fw-head"><div class="fw-badge">6</div><h3>Financial Planning</h3></div>
+        <p>Comprehensive assistance with education loans, bank documents, and financial proof.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Loan assistance</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Bank documentation</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Sponsorship letters</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Financial budgeting</li>
+        </ul>
+      </div>
+
+      <div class="fw-card rv rv-d1">
+        <span class="fw-watermark">7</span>
+        <div class="fw-head"><div class="fw-badge">7</div><h3>Visa Application Process</h3></div>
+        <p>Meticulous handling with 100% compliance with embassy requirements for each destination.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Visa form filling</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Biometric scheduling</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Document uploading</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Compliance check</li>
+        </ul>
+      </div>
+
+      <div class="fw-card rv rv-d2">
+        <span class="fw-watermark">8</span>
+        <div class="fw-head"><div class="fw-badge">8</div><h3>Interview Preparation</h3></div>
+        <p>Intensive mock interviews and personalized coaching to build your confidence for the big day.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Mock interviews</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Q&amp;A preparation</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Body language coaching</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Document rehearsal</li>
+        </ul>
+      </div>
+
+      <div class="fw-card rv rv-d3">
+        <span class="fw-watermark">9</span>
+        <div class="fw-head"><div class="fw-badge">9</div><h3>Pre-Departure Transition</h3></div>
+        <p>Complete pre-departure briefing and initial settlement support to start your journey smoothly.</p>
+        <ul class="fw-list">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Accommodation assistance</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Travel planning</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Insurance guidance</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#cc0000"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Cultural orientation</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 4. CTA ══ -->
+<section class="cta-sec">
+  <div class="cta-bg"></div>
+  <div class="cta-orb1"></div><div class="cta-orb2"></div>
+  <div class="container">
+    <h2 class="rv">Start Your Visa Journey Today</h2>
+    <p class="rv rv-d1">Contact Sukriti Global and let our experts guide you every step of the way toward your dream destination.</p>
+    <a href="../contact.html" class="btn-white rv rv-d2">Contact Us Today</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-body">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="f-brand">
+          <div class="footer-logo">
+            <div class="logo-wrap"><img src="../images/logo.png" alt="Sukriti Global" class="logo-img" style="width:100%;height:100%;object-fit:contain"></div>
+            <div class="logo-text-block">
+              <span class="logo-title">Sukriti Global</span>
+              <span class="logo-subtitle">Education Consultancy</span>
+            </div>
+          </div>
+          <p>Your trusted partner for study abroad consulting in Nepal.</p>
+          <div class="f-socials">
+            <a href="https://www.facebook.com/profile.php?id=61583860509761&sk=reels_tab" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" fill="currentColor"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a>
+            <a href="https://www.instagram.com/sukritiglobal/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+            <a href="https://www.tiktok.com/@sukritiglobal" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor"><path d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg></a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h4>Study Abroad</h4>
+          <ul>
+            <li><a href="../study-australia.html">Australia</a></li>
+            <li><a href="../study-usa.html">USA</a></li>
+            <li><a href="../study-uk.html">UK</a></li>
+            <li><a href="../study-japan.html">Japan</a></li>
+            <li><a href="../study-newzealand.html">New Zealand</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Student Services</h4>
+          <ul>
+            <li><a href="visa-application.html">Visa Application</a></li>
+            <li><a href="pte-preparation.html">PTE Preparation</a></li>
+            <li><a href="ielts-training.html">IELTS Training</a></li>
+            <li><a href="japanese-language.html">Japanese Language</a></li>
+            <li><a href="ssw-preparation.html">SSW Preparation</a></li>
+              <li><a href="jlpt.html">JLPT Preparation</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Contact</h4>
+          <div class="f-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Gongabu Chowk, Infinity Movies Bldg, Kathmandu</span>
+          </div>
+          <div class="f-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+977-01-4978006</span>
+          </div>
+          <div class="f-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info.sukritiglobal@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2025 Sukriti Global Education Consultancy. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="back-top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+</button>
+
+<a href="https://wa.me/9779851159978" target="_blank" class="whatsapp-float" style="position:fixed;bottom:90px;right:28px;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;box-shadow:0 6px 24px rgba(37,211,102,.4);z-index:998;text-decoration:none">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+</a>
+
+<script src="../js/main.js" defer></script>
+<script>
+  /* ── Video autoplay on scroll into view ── */
+  (function(){
+    var video = document.getElementById('heroVideo');
+    if(!video) return;
+
+    /* fade in once enough data loaded */
+    video.addEventListener('canplay', function(){
+      video.classList.add('loaded');
+    });
+
+    /* play/pause based on visibility */
+    if('IntersectionObserver' in window){
+      var vObs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            video.play().catch(function(){});
+          } else {
+            video.pause();
+          }
+        });
+      }, {threshold: 0.1});
+      vObs.observe(document.getElementById('page-hero'));
+    } else {
+      /* fallback: just play */
+      video.play().catch(function(){});
+    }
+  })();
+
+  /* scroll reveal */
+  (function(){
+    var els=document.querySelectorAll('.rv');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})
+    },{threshold:0.1});
+    els.forEach(function(e){io.observe(e)});
+  })();
+
+  /* 3D mouse-tilt on framework cards */
+  (function(){
+    document.querySelectorAll('.fw-card').forEach(function(card){
+      card.addEventListener('mousemove',function(e){
+        var r=card.getBoundingClientRect();
+        var x=(e.clientX-r.left)/r.width-.5;
+        var y=(e.clientY-r.top)/r.height-.5;
+        card.style.transform='translateY(-12px) rotateX('+(-y*10)+'deg) rotateY('+(x*10)+'deg) scale(1.02)';
+      });
+      card.addEventListener('mouseleave',function(){
+        card.style.transform='';
+      });
+    });
+  })();
+
+  /* 3D mouse-tilt on why-cards */
+  (function(){
+    document.querySelectorAll('.why-card').forEach(function(card){
+      card.addEventListener('mousemove',function(e){
+        var r=card.getBoundingClientRect();
+        var x=(e.clientX-r.left)/r.width-.5;
+        var y=(e.clientY-r.top)/r.height-.5;
+        card.style.transform='translateY(-12px) rotateX('+(-y*12)+'deg) rotateY('+(x*12)+'deg)';
+      });
+      card.addEventListener('mouseleave',function(){
+        card.style.transform='';
+      });
+    });
+  })();
+</script>
+</body>
+</html>
+

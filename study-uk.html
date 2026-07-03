@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study in UK - Sukriti Global Education Consultancy</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: sans-serif;
+      overflow-x: hidden
+    }
+
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #003F78;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease
+    }
+
+    .preloader-ring {
+      width: 80px;
+      height: 80px;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-top-color: #CC0000;
+      border-right-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite
+    }
+
+    .preloader-logo {
+      position: absolute;
+      font-family: sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      color: #fff
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+    <style>
+    #page-hero { background: linear-gradient(135deg, #003F78 0%, #007bb2 55%, #00bfff 100%) !important; animation: none !important; }
+    .page-hero .page-hero-content { position: relative; z-index: 2; }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+
+<body>
+  <div id="preloader"
+    style="position:fixed;inset:0;background:linear-gradient(135deg, #003F78, #007BB2, #00BFFF);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity 0.6s,visibility 0.6s">
+    <div class="preloader-inner">
+      <div class="preloader-ring"></div>
+      <div class="preloader-logo"><img src="Sukriti Logo.png" alt="SG" style="width:100%;height:100%;object-fit:contain"
+          onerror="this.outerHTML='SG'"></div>
+    </div>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", function () { var p = document.getElementById("preloader"); if (p) { p.style.transition = "opacity 0.4s"; p.style.opacity = "0"; setTimeout(function () { p.style.display = "none"; }, 400); } });</script>
+  <header id="main-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-wrap"><img src="Sukriti Logo.png" alt="Logo" class="logo-img"
+            onerror="this.style.display='none';document.getElementById('logofb').style.display='flex'">
+          <div class="logo-fb" id="logofb" style="display:none">SG</div>
+        </div>
+        <div class="logo-text-block"><span class="logo-title">Sukriti Global</span><span class="logo-subtitle">Education
+            Consultancy</span></div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="has-dropdown"><a href="#" class="nav-link active">Study Abroad <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="currentColor" style="vertical-align:middle">
+              <path d="M7 10l5 5 5-5z" />
+            </svg></a>
+          <ul class="dropdown">
+            <li><a href="study-australia.html">Australia</a></li>
+            <li><a href="study-usa.html">USA</a></li>
+            <li><a href="study-uk.html">UK</a></li>
+            <li><a href="study-japan.html">Japan</a></li>
+            <li><a href="study-newzealand.html">New Zealand</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="#" class="nav-link">Student Services <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" width="0.75em" height="0.75em" fill="currentColor" style="vertical-align:middle">
+              <path d="M7 10l5 5 5-5z" />
+            </svg></a>
+          <ul class="dropdown">
+            <li><a href="services/visa-application.html">Visa Application</a></li>
+            <li><a href="services/pte-preparation.html">PTE Test Preparation</a></li>
+            <li><a href="services/ielts-training.html">IELTS Training</a></li>
+            <li><a href="services/japanese-language.html">Japanese Language</a></li>
+            <li><a href="services/jlpt.html">JLPT Preparation</a></li>
+            <li><a href="services/ssw-preparation.html">SSW Preparation</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions"><a href="contact.html" class="btn-consult">Free Counselling</a></div>
+    </nav>
+  </header>
+
+  <section class="page-hero" id="page-hero">
+    <div class="page-hero-content">
+      <div style="font-size:60px;margin-bottom:16px"></div>
+      <h1 class="anim-fadeup">Study in UK</h1>
+      <div class="breadcrumb anim-fadeup"><a href="index.html">Home</a> <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+        </svg> <a href="#">Study Abroad</a> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+          height="1em" fill="currentColor" style="vertical-align:middle">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+        </svg> <span>UK</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="col-img reveal-left">
+          <img src="photos/uk.jpg" alt="Study in UK"
+            style="width:100%;border-radius:16px;box-shadow:var(--shadow-lg);object-fit:cover;">
+        </div>
+        <div class="col-content reveal-right">
+          <div class="tag-label">Study Abroad</div>
+          <h2>About Education in the <span class="red">United Kingdom</span></h2>
+          <p>The United Kingdom is one of the world's most prestigious study destinations, renowned for its academic excellence, shorter course durations, and globally respected qualifications. Home to some of the world's oldest and highest-ranked universities, the UK offers Nepali students access to high-quality education, strong career prospects, and valuable post-study work opportunities through the Graduate Route visa.</p>
+          <p>The UK education system emphasizes independent learning, critical thinking, research skills, and practical assessment methods. Bachelor's degrees are typically completed in three years, while most Master's programs take just one year — making the UK a cost-effective and time-efficient choice.</p>
+          <p><strong>Why Choose the United Kingdom?</strong></p>
+          <ul class="check-list">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> World-renowned universities with strong international reputations</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Shorter course durations that help reduce overall study costs</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Post-study work through the Graduate Route visa (2 years / 3 years PhD)</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Wide range of scholarships and funding opportunities</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> High academic standards with globally recognized qualifications</li>
+          </ul>
+          <a href="contact.html" class="btn-primary">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--gray)">
+    <div class="container">
+      <div class="sec-header">
+        <div class="tag-label">Requirements</div>
+        <h2>Key <span class="red">Requirements</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px">
+        <div class="svc-card key-req-card reveal-card">
+          <div class="svc-icon svc-icon-red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></div>
+          <h3>Academic Qualification</h3>
+          <p>Minimum GPA 2.8 for bachelor's programs. Minimum 50% in bachelor's degree for postgraduate. Study gaps accepted with valid justification.</p>
+          <div class="svc-details">
+            <ul>
+              <li>SEE + Grade 12 with minimum GPA 2.8 for undergraduate entry</li>
+              <li>Bachelor's degree with at least 50% marks for master's programs</li>
+              <li>Study gap of 2–5 years accepted for master's with documented explanation</li>
+              <li>Notarized/attested transcripts and degree certificates required</li>
+              <li>NEB equivalency required for foreign board certificates</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card key-req-card reveal-card">
+          <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg></div>
+          <h3>English Proficiency</h3>
+          <p>IELTS (UKVI) 6.0 for bachelor's / IELTS (UKVI) 6.5 for master's. PTE Academic also accepted by most UK universities.</p>
+          <div class="svc-details">
+            <ul>
+              <li>IELTS (Academic/UKVI): 6.0 for undergraduate, 6.5 for postgraduate</li>
+              <li>PTE Academic: 51 for bachelor's, 58 for master's</li>
+              <li>Some universities accept Duolingo English Test (85+)</li>
+              <li>English-medium schooling may be considered for conditional offers</li>
+              <li>Test scores must be valid within 2 years of application date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card key-req-card reveal-card">
+          <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+          <h3>Financial Proof</h3>
+          <p>Funds must be held in bank for at least 28 consecutive days before the visa application. Income sources include salary, property rent, and business.</p>
+          <div class="svc-details">
+            <ul>
+              <li>Pre-sessional / foundation: approx. NPR 25–35 Lakhs</li>
+              <li>Bachelor's programs: approx. NPR 40–55 Lakhs</li>
+              <li>Master's programs: approx. NPR 35–50 Lakhs</li>
+              <li>28-day bank balance rule strictly enforced by UK Home Office</li>
+              <li>Education loan sanction letter also accepted as financial evidence</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card key-req-card reveal-card">
+          <div class="svc-icon svc-icon-red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align:middle"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div>
+          <h3>UK Student Visa Documentation</h3>
+          <p>CAS (Confirmation of Acceptance for Studies) from a licensed UK sponsor institution is mandatory for the student visa application.</p>
+          <div class="svc-details">
+            <ul>
+              <li>Valid passport (minimum 6 months beyond course end date)</li>
+              <li>CAS number issued by a UKVI-licensed university or college</li>
+              <li>Immigration Health Surcharge (IHS) fee payment confirmation</li>
+              <li>SOP, 2–3 LORs, academic transcripts, and financial documents</li>
+              <li>Tuberculosis (TB) test certificate from an approved clinic in Nepal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Fields of Study -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">Programs</div>
+        <h2>Top Fields of <span class="red">Study</span></h2>
+        <p style="max-width:620px;text-align:center;color:#555;margin-top:8px">The UK offers world-class programs across a wide range of disciplines. Here are the most popular fields for Nepali students.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center">
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid var(--blue);flex:0 0 calc(33.33% - 16px);min-width:260px">
+          <img src="../../Ausimage/Business & Management.jpg" alt="Business & Management" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Business &amp; Management</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Programs focused on leadership, entrepreneurship, global business, and strategic management. MBA programs are 1-year in the UK, making them highly cost-effective.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid #22c55e;flex:0 0 calc(33.33% - 16px);min-width:260px">
+          <img src="../../Ausimage/IT & Computer Science.jpg" alt="Computer Science & IT" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Computer Science &amp; IT</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Industry-oriented programs covering software development, cybersecurity, AI, and emerging technologies with strong graduate employment outcomes.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid var(--red);flex:0 0 calc(33.33% - 16px);min-width:260px">
+          <img src="../../Ausimage/Engineering.jpg" alt="Engineering" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Engineering</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Highly respected programs with strong practical and research-based learning opportunities across civil, mechanical, electrical, and chemical engineering.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid #8b5cf6;flex:0 0 calc(33.33% - 16px);min-width:260px">
+          <img src="../../Ausimage/Nursing & Healthcare.jpg" alt="Health Sciences & Nursing" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Health Sciences &amp; Nursing</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Career-focused programs designed to meet growing global healthcare demands with strong clinical training and graduate employment rates.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid #f59e0b;flex:0 0 calc(33.33% - 16px);min-width:260px">
+          <img src="../../Ausimage/Hospitality & Cookery (VET).jpg" alt="Hospitality & Tourism" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Hospitality &amp; Tourism</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Programs that prepare students for international careers in hospitality, travel, and tourism management with strong placement networks globally.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border-top:4px solid #0d9488;flex:0 0 calc(33.33% - 16px);min-width:260px">
+          <img src="photos/law.jpg" alt="Law & Social Sciences" style="width:100%;height:160px;object-fit:cover;display:block;">
+          <div style="padding:24px">
+            <h3 style="font-size:18px;margin-bottom:10px">Law, Social Sciences &amp; TESOL</h3>
+            <p style="color:#555;font-size:14px;line-height:1.6">Programs developing analytical thinking and communication skills for careers in law, social work, education, and language teaching (TESOL/TEFL).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Process -->
+  <section class="section" style="background:var(--gray)">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">How to Apply</div>
+        <h2>Application <span class="red">Process</span></h2>
+        <p style="max-width:600px;text-align:center;color:#555;margin-top:8px">Follow these steps to successfully apply to a UK university with full guidance from Sukriti Global.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;max-width:1000px;margin:0 auto">
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">1</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">Free Counselling &amp; Course Selection</h3><p style="color:#555;font-size:14px;line-height:1.6">Meet with our expert UK counselors to identify the right university, program level, and intake based on your academic profile, budget, and career goals.</p></div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">2</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">IELTS / PTE Preparation</h3><p style="color:#555;font-size:14px;line-height:1.6">Prepare for IELTS or PTE through our in-house training programs to achieve the required scores for your chosen UK university and visa application.</p></div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">3</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">Document Preparation &amp; University Application</h3><p style="color:#555;font-size:14px;line-height:1.6">Prepare SOP, LORs, and all required documents. Submit applications to shortlisted UK universities and receive your offer letter and CAS number.</p></div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:#f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">4</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">Financial Proof &amp; Visa Application</h3><p style="color:#555;font-size:14px;line-height:1.6">Arrange 28-day bank balance, pay Immigration Health Surcharge (IHS), complete the online visa application, and book your biometric appointment.</p></div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px 24px;box-shadow:var(--shadow-lg);display:flex;gap:20px;align-items:flex-start;flex:0 0 calc(33.33% - 16px);min-width:280px">
+          <div style="min-width:48px;height:48px;background:#8b5cf6;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px">5</div>
+          <div><h3 style="font-size:17px;margin-bottom:8px">Visa Decision &amp; Pre-Departure</h3><p style="color:#555;font-size:14px;line-height:1.6">Upon visa approval, complete your pre-departure briefing with Sukriti Global, arrange accommodation, and prepare for your journey to the UK.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work & Graduate Route -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">Career &amp; Work</div>
+        <h2>Work &amp; <span class="red">Graduate Route</span></h2>
+        <p style="max-width:620px;text-align:center;color:#555;margin-top:8px">The UK offers strong work rights during and after studies, with a dedicated post-study work visa for graduates.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-left:4px solid var(--blue)">
+          <h3 style="font-size:17px;margin-bottom:12px;color:var(--blue-dark)">Part-Time Work During Studies</h3>
+          <p style="color:#555;font-size:14px;line-height:1.7">UK student visa holders are permitted to work <strong>up to 20 hours per week</strong> during term time. During official vacation periods, full-time work is allowed. Minimum wage in the UK is currently GBP £11.44/hour (age 21+).</p>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-left:4px solid #22c55e">
+          <h3 style="font-size:17px;margin-bottom:12px;color:#166534">Graduate Route Visa (Post-Study Work)</h3>
+          <p style="color:#555;font-size:14px;line-height:1.7">After completing a UK degree, graduates are eligible for the <strong>Graduate Route visa — 2 years for bachelor's and master's graduates, 3 years for PhD graduates</strong>. No job offer is required. Work in any occupation, any employer, unlimited hours.</p>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-left:4px solid var(--red)">
+          <h3 style="font-size:17px;margin-bottom:12px;color:#7f1d1d">Skilled Worker Visa Pathway</h3>
+          <p style="color:#555;font-size:14px;line-height:1.7">After the Graduate Route, students with a job offer from a UK employer can switch to a <strong>Skilled Worker visa</strong>, which can lead to Indefinite Leave to Remain (ILR) after 5 years — a pathway to permanent residency in the UK.</p>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-left:4px solid #f59e0b">
+          <h3 style="font-size:17px;margin-bottom:12px;color:#78350f">Estimated Living Costs</h3>
+          <ul style="color:#555;font-size:14px;line-height:2;padding-left:0;list-style:none">
+            <li>🏠 Accommodation: GBP £600–1,000/month</li>
+            <li>🍽 Food &amp; groceries: GBP £150–300/month</li>
+            <li>🚌 Transport: GBP £50–100/month</li>
+            <li>📚 Books &amp; supplies: GBP £30–80/month</li>
+            <li>💰 Total est.: GBP £900–1,500/month</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scholarships -->
+  <section class="section" style="background:var(--gray)">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">Financial Aid</div>
+        <h2>Scholarships &amp; <span class="red">Funding</span></h2>
+        <p style="max-width:600px;text-align:center;color:#555;margin-top:8px">Several prestigious scholarships are available for Nepali students wishing to study in the United Kingdom.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-top:4px solid var(--red)">
+          <h3 style="font-size:18px;margin-bottom:10px">Chevening Scholarship</h3>
+          <p style="color:#555;font-size:14px;line-height:1.6">The UK government's flagship international scholarship for outstanding emerging leaders. Fully covers tuition fees, living expenses, travel, and more. Applications open annually for master's programs.</p>
+          <div style="margin-top:14px;padding:10px 14px;background:#fef2f2;border-radius:8px;font-size:13px;color:#991b1b;font-weight:600">Fully Funded — Highly Competitive</div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-top:4px solid var(--blue)">
+          <h3 style="font-size:18px;margin-bottom:10px">University Merit Scholarships</h3>
+          <p style="color:#555;font-size:14px;line-height:1.6">Many UK universities offer merit-based scholarships ranging from GBP £1,000 to full tuition waivers for high-achieving international students. Awarded based on academic performance and SOP quality.</p>
+          <div style="margin-top:14px;padding:10px 14px;background:#eff6ff;border-radius:8px;font-size:13px;color:#1e40af;font-weight:600">GBP £1,000 – Full Tuition</div>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:var(--shadow-lg);border-top:4px solid #22c55e">
+          <h3 style="font-size:18px;margin-bottom:10px">GREAT Scholarship</h3>
+          <p style="color:#555;font-size:14px;line-height:1.6">The GREAT Britain Campaign offers scholarships for Nepali students in partnership with UK universities and the British Council. Minimum award of GBP £10,000 towards tuition fees for one-year master's programs.</p>
+          <div style="margin-top:14px;padding:10px 14px;background:#f0fdf4;border-radius:8px;font-size:13px;color:#166534;font-weight:600">Min. GBP £10,000 Tuition Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-header" style="margin-bottom:48px">
+        <div class="tag-label">FAQ</div>
+        <h2>Frequently Asked <span class="red">Questions</span></h2>
+      </div>
+      <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">How long does a bachelor's and master's degree take in the UK? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">Bachelor's degrees in the UK are typically 3 years (4 years in Scotland). Most master's programs are 1 year full-time, which is significantly shorter than the 2-year programs in many other countries. This makes the UK very cost-effective in terms of both time and total investment.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">What is the 28-day bank balance rule for the UK student visa? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">UK Home Office requires that the required funds (tuition fee for first year + £1,334/month for living costs in London, or £1,023/month outside London) must be held continuously in your bank account for at least 28 consecutive days before you apply for the student visa. The funds must still be available on the date of application.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">Can I work while studying in the UK on a student visa? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">Yes. UK student visa holders are permitted to work up to 20 hours per week during term time. During official vacation periods (Christmas, Easter, summer), you can work full-time. The current UK National Living Wage is GBP £11.44/hour (age 21+), making part-time work a meaningful income supplement.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">What is the Graduate Route visa and how do I apply? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">The Graduate Route visa allows UK university graduates to remain in the UK and work for 2 years (3 years for PhD graduates) after completing their degree. There is no requirement for a job offer, and you can work in any sector. You must apply from within the UK before your student visa expires. Sukriti Global provides full support for this process.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">What are the total costs of studying in the UK for Nepali students? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">Tuition fees for international students typically range from GBP £10,000–20,000/year for undergraduate programs and GBP £12,000–25,000 for a one-year master's. Living costs add approximately GBP £10,000–18,000/year. The 1-year master's is particularly cost-effective as total costs are much lower than equivalent 2-year programs in the USA or Australia.</p>
+        </details>
+        <details style="background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.08);cursor:pointer">
+          <summary style="font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center">When are UK university intakes and application deadlines? <span style="color:var(--red);font-size:20px">+</span></summary>
+          <p style="margin-top:14px;color:#555;line-height:1.7;font-size:14px">The primary intake is in September (autumn), for which applications typically open from October the previous year. Selected universities also offer a January intake with limited programs. For undergraduate programs, most applications go through UCAS. Postgraduate applications are made directly to the university. We recommend applying at least 6–9 months before your intended start date.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-sec">
+    <div class="container">
+      <h2 class="anim-fadeup">Ready to Study in UK?</h2>
+      <p class="anim-fadeup">Get expert guidance from our counselors who specialize in UK student admissions.</p>
+      <a href="contact.html" class="btn-white anim-fadeup">Book Free Counselling Session</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="f-brand">
+            <div class="footer-logo">
+              <div class="logo-wrap">
+                <img src="images/logo.png" alt="Sukriti Global" class="logo-img" style="width:100%;height:100%;object-fit:contain">
+              </div>
+              <div class="logo-text-block"><span class="logo-title">Sukriti Global</span><span
+                  class="logo-subtitle">Education Consultancy</span></div>
+            </div>
+            <p>Your trusted partner for study abroad consulting in Nepal.</p>
+            <div class="f-socials"><a href="https://www.facebook.com/profile.php?id=61583860509761&sk=reels_tab" target="_blank"><svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" fill="currentColor"
+                  style="vertical-align:middle">
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                </svg></a><a href="https://www.instagram.com/sukritiglobal/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></a><a href="https://www.tiktok.com/@sukritiglobal" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="vertical-align:middle">
+                  <path
+                    d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                </svg></a></div>
+          </div>
+          <div class="f-col">
+            <h4>Study Abroad</h4>
+            <ul>
+              <li><a href="study-australia.html">Australia</a></li>
+              <li><a href="study-usa.html">USA</a></li>
+              <li><a href="study-uk.html">UK</a></li>
+              <li><a href="study-japan.html">Japan</a></li>
+            <li><a href="study-newzealand.html">New Zealand</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Student Services</h4>
+            <ul>
+              <li><a href="services/visa-application.html">Visa Application</a></li>
+              <li><a href="services/pte-preparation.html">PTE Preparation</a></li>
+              <li><a href="services/ielts-training.html">IELTS Training</a></li>
+              <li><a href="services/japanese-language.html">Japanese Language</a></li>
+              <li><a href="services/ssw-preparation.html">SSW Preparation</a></li>
+              <li><a href="services/jlpt.html">JLPT Preparation</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Contact</h4>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg><span>Gongabu Chowk, Infinity Movies Bldg,
+                Kathmandu</span></div>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg><span>+977-01-4978006</span></div>
+            <div class="f-contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                fill="currentColor" style="vertical-align:middle">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+              </svg><span>info.sukritiglobal@gmail.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Sukriti Global Education Consultancy. All Rights Reserved.</p>
+        
+    </div>
+  </footer>
+  <button class="back-top" id="back-top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+      height="1em" fill="currentColor" style="vertical-align:middle">
+      <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" />
+    </svg></button>
+  <a href="https://wa.me/9779851159978?text=Hello%20Sukriti%20Global!" target="_blank" class="whatsapp-float"><svg
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor"
+      style="vertical-align:middle">
+      <path
+        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+    </svg></a>
+  <script src="js/main.js" defer></script>
+  <script>
+    (function(){
+      var v=document.getElementById('heroVideo');
+      if(!v)return;
+      v.play().catch(function(){});
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(e){
+          e[0].isIntersecting?v.play().catch(function(){}):v.pause();
+        },{threshold:0.1}).observe(document.getElementById('page-hero'));
+      }
+    })();
+  </script>
+</body>
+
+</html>
